@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- -------------------------------------------------- Metadata  -------------------------------------------------- -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Form</title>
+
+  <!--  -------------------------------------------------- CSS Stylesheet  --------------------------------------------------  -->
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+</head>
+
+<body>
+ <!-- -------------------------------------------------- Start : Wrapper  --------------------------------------------------  -->
+  <div id="wrapper">
+
+    <!--  -------------------------------------------------- Headings  -------------------------------------------------- -->
+    <div class="container">
+
+      <p id="para">One Account. All of Sirius Working For You.</p>
+      <h1 id="heading">Create Your Account</h1>
+
+    </div>
+
+    <!--  -------------------------------------------------- Start : Form creation  -------------------------------------------------- -->
+    <form action="">
+
+      <div class="container">
+
+        <!-- name -->
+        <div class="fill">
+          <label for="name">Name</label><br>
+          <input class="input" type="text" name="name" id="name">
+        </div>
+
+        <!-- email address -->
+        <div class="fill">
+          <label for="email">Email Address</label><br>
+          <input class="input" type="email" name="email" id="email">
+        </div>
+
+        <!-- password -->
+        <div class="fill">
+          <label  for="password">Password</label><br>
+          <input class="input" type="password" name="password" id="password">
+        </div>
+
+        <!-- contact number -->
+        <div class="fill">
+          <label  for="contact">Contact Number</label><br>
+          <input class="input" type="text" name="contact" id="contact">
+        </div>
+
+        <!-- gender -->
+        <div class="fill">
+          <label  for="gender">Gender</label><br>
+          <select class="input" name="gender" id="gender">
+            <option value="gender" selected disabled>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+
+        <!-- state -->
+        <div class="fill">
+          <label  for="state">State</label><br>
+          <select class="input" name="state" id="state">
+            <option value="Select State" selected disabled>Select State</option>
+            <option value="andhra">Andhra Pradesh</option>
+            <option value="odissa">Odissa</option>
+            <option value="maharastra">Maharastra</option>
+            <option value="tamil nadu">Tamil Nadu</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="kerela">Kerela</option>
+          </select>
+        </div>
+
+        <!-- passport  radio button-->
+        <div class="fill">
+          <label for="radio-choice">Do you have Passport?</label>
+          <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1">
+          <label for="radio-choice-1">Yes</label>
+
+          <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
+          <label for="radio-choice-2">No</label>
+        </div>
+
+        <!-- website url -->
+        <div class="fill">
+          <label  for="url">Your Website URL</label><br>
+          <input class="input" type="text" name="url" id="url">
+        </div>
+
+        <!-- terms and conditions checkbox -->
+        <div class="fill">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <label  for="checkbox"> I accept Terms & Conditions</label>
+        </div>
+
+        <!-- sign up button -->
+        <div>
+          <input type="submit" class="button" value="SIGN UP" />
+        </div>
+
+      </div>
+
+    </form>
+    <!--  -------------------------------------------------- End : Form creation   -------------------------------------------------- -->
+  </div>
+  <!-- -------------------------------------------------- End : Wrapper  --------------------------------------------------  -->
+</body>
+
+</html>

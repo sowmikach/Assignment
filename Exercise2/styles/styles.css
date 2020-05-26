@@ -1,0 +1,42 @@
+#wrapper{
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+/* heading1 */
+#para{
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+/* heading2 */
+#heading{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+/* form styling */
+.fill{
+  padding-bottom: 20px;
+}
+
+/* input styling */
+.input{
+  margin-top: 4px;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* button styling */
+.button {
+  background-color:#ebbd1a;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
