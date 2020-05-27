@@ -1,0 +1,95 @@
+/* Title section */
+#title{
+  background: #5B3256;
+  color: white;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 20px;
+}
+
+/* Image section */
+#photo{
+  background-image: url("https://www.greenandvibrant.com/sites/default/files/inline-images/types-of-coconuts/King-Coconut.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  height: 500px;
+}
+
+/* Image gallery section */
+#gallery{
+  margin: 40px;
+  font-family: Roboto, sans-serif;
+}
+ .pic{
+  margin: 15px;
+  display: inline-table;
+}
+
+.im{
+  height: 200px;
+  width: 360px;
+  margin-bottom: 10px;
+}
+
+.desc{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  width: 360px;
+}
+
+.place{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contents{
+  width: 360px;
+  margin-bottom: 15px;
+}
+
+.button{
+  background-color: #5B3256;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Content Section */
+#content{
+  margin: 40px 150px;
+  font-family: Roboto, sans-serif;
+}
+
+#content h1{
+  color: #5B3256;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#content p{
+  color: #A9A9A9;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+/* Copyright Section */
+#copyright {
+  background: #5B3256;
+  color: white;
+  font-family: Roboto, sans-serif;
+  padding: 15px 40px;
+}
+
+#copyright h1{
+  font-weight: bold;
+}
