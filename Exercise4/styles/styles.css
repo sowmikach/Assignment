@@ -21,24 +21,28 @@
 
 /* Image gallery section */
 #gallery{
-  margin: 40px;
+  margin:30px auto 30px;
   font-family: Roboto, sans-serif;
+  width:90%;
 }
+
  .pic{
-  margin: 15px;
-  display: inline-table;
+  width:31.1%;
+  height : auto;
+  display: inline-block;
+  margin:10px 10px 20px;
+  vertical-align: top;
 }
 
 .im{
   height: 200px;
-  width: 360px;
   margin-bottom: 10px;
+  width:100%;
 }
 
 .desc{
   font-size: 1.2em;
   margin-bottom: 10px;
-  width: 360px;
 }
 
 .place{
@@ -47,7 +51,6 @@
 }
 
 .contents{
-  width: 360px;
   margin-bottom: 15px;
 }
 
@@ -64,8 +67,9 @@
 
 /* Content Section */
 #content{
-  margin: 40px 150px;
   font-family: Roboto, sans-serif;
+  width:80%;
+  margin:50px auto 30px;
 }
 
 #content h1{
