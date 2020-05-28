@@ -13,7 +13,8 @@
 
 /* div blocks styling */
 .container{
-  margin: 30px 80px;
+  margin: 30px auto;
+  width: 90%;
   font-family: Roboto, sans-serif;
 }
 
