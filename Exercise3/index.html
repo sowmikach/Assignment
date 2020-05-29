@@ -3,66 +3,65 @@
 
 <head>
 
-  <!-- metadata -->
+  <!-- -----------------------metadata ----------------------- -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Exercise3</title>
 
-  <!-- CSS Stylesheet -->
+  <!-- ----------------------- CSS Stylesheet ----------------------- -->
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
 
 <body>
-  <!-- -------------------------------------------------- Start : Wrapper  --------------------------------------------------  -->
-  <div id="wrapper">
+  <!-- ----------------------- Start : Wrapper ------------------------ -->
+  <div class="wrapper">
 
-    <div class="title">
+    <!-- ----------------------- Start : header ------------------------ -->
+    <header>
       <h1>Box Arena</h1>
-    </div>
+    </header>
+    <!-- ----------------------- End : header ------------------------ -->
 
 
-    <!--  -------------------------------------------------- Start : Using display properties  --------------------------------------------------  -->
+    <!-- ------------ Start : Using display properties --------------- -->
     <div class="container">
 
-      <h1 class="text">Using Display</h1>
+      <h1>Using Display</h1>
 
-      <div class="block">
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
-        <div class="display"></div>
+      <div class="box_wrapper">
+        <div class="box_item property_display"></div>
+        <div class="box_item property_display"></div>
+        <div class="box_item property_display"></div>
+        <div class="box_item property_display"></div>
+        <div class="box_item property_display"></div>
+        <div class="box_item property_display"></div>
       </div>
 
     </div>
-    <!--  -------------------------------------------------- End : Using display properties  --------------------------------------------------  -->
+    <!-- ------------- End : Using display properties ----------------- -->
 
-    <!--  -------------------------------------------------- Start : Using float properties  --------------------------------------------------  -->
+    <!-- ------------- Start : Using float properties ----------------  -->
     <div class="container">
 
-      <h1 class="text">Using Float</h1>
-      <!-- TODO:Meaningful names for classes -->
-      <div class="block">
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
-        <div class="float"></div>
+      <h1>Using Float</h1>
+
+      <div class="box_wrapper">
+        <div class="box_item property_float"></div>
+        <div class="box_item property_float"></div>
+        <div class="box_item property_float"></div>
+        <div class="box_item property_float"></div>
+        <div class="box_item property_float"></div>
+        <div class="box_item property_float"></div>
+        <div class="clear-fix"></div>
       </div>
-<!-- Missing the clearfix -->
+
     </div>
-    <!--  -------------------------------------------------- End : Using float properties  --------------------------------------------------  -->
+    <!-- --------------- End : Using float properties  --------------- -->
   </div>
-  <!-- -------------------------------------------------- End : Wrapper  --------------------------------------------------  -->
+  <!-- ------------------- End : Wrapper  ------------------  -->
 </body>
 
 </html>
