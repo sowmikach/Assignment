@@ -1,37 +1,40 @@
-#wrapper{
+.wrapper{
   font-family: Arial, sans-serif;
   margin: 40px;
 }
 
-/* heading1 */
-#para{
+/* -----------------------Start : paragraph tag in header ----------------- */
+header p{
   font-size: 1.5em;
   padding-bottom: 20px;
 }
+/* -----------------------End : paragraph tag in header ----------------- */
 
-/* heading2 */
-#heading{
+/* -----------------------Start : heading tag in header ----------------- */
+header h1{
   font-size: 1.5em;
   font-weight: bold;
   padding-bottom: 30px;
 }
+/* -----------------------End : heading tag in header------------------- */
 
-/* form styling */
-.fill{
+/* ----------------------- Start : signup form styling ---------------------- */
+.form_fields{
   padding-bottom: 20px;
 }
 
-/* input styling */
-.input{
+/* -------------------- input tag styling ------------------------ */
+.form_input{
+  box-sizing: border-box;
   margin-top: 4px;
   width: 20%;
   padding: 10px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  color: #ccc;
 }
 
-/* button styling */
-.button {
+/* -------------------- button tag styling ---------------------*/
+.submit {
   background-color:#ebbd1a;
   border: none;
   color: white;
@@ -40,3 +43,4 @@
   font-size: 15px;
   cursor: pointer;
 }
+/* ----------------------- End : signup form styling ---------------------- */
