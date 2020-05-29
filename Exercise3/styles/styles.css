@@ -1,45 +1,47 @@
-#wrapper{
+.wrapper{
   font-family: Arial, sans-serif;
 }
 
-/* Styling the title */
-.title{
+/* ------------------ Styling the header -------------- */
+header h1{
   background-color: #bf3232;
+  font-size: 3em;
   color: white;
   padding: 15px;
   margin-bottom: 30px;
-  font-size: 3em;
-  display: block;
 }
 
-/* Styling the div blocks */
-.text{
+/* ------------------ Styling the div blocks ------------------ */
+.container h1{
   font-size: 2.4em;
   font-weight: bold;
   margin-left: 40px;
 }
 
-.block{
+.box_wrapper{
   background: #c0e0f0;
   margin: 40px;
-  padding: 10px 50px;
-  overflow: hidden;
+  padding: 10px 40px;
 }
 
-/* Styling using display properties */
-.display {
+.box_item{
+  width:150px;
+  height:150px;
+  margin: 15px;
+}
+
+/* ------------------ Styling using display property ------------------ */
+.property_display{
   background: #3c3cc9;
-  width:100px;
-  height:100px;
   display: inline-block;
-  margin: 15px;;
 }
 
-/* Styling using float properties */
-.float{
+/* ------------------ Styling using float property ------------------ */
+.property_float{
   background:#bd5bcf;
-  width:100px;
-  height:100px;
   float: left;
-  margin: 17px;
+}
+
+.clear-fix{
+  clear: both;
 }
