@@ -3,117 +3,111 @@
 
 <head>
 
-  <!-- -------------------------------------------------- Metadata  -------------------------------------------------- -->
+  <!-- ---------------------- Metadata --------------------- -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>HTML Form</title>
 
-  <!--  -------------------------------------------------- CSS Stylesheet  --------------------------------------------------  -->
+  <!-- -------------------- CSS Stylesheet -------------------- -->
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
 
 <body>
- <!-- -------------------------------------------------- Start : Wrapper  --------------------------------------------------  -->
-  <div id="wrapper">
+  <!-- ---------------------- Start : Wrapper ---------------------- -->
+  <div class="wrapper">
 
-    <!--  -------------------------------------------------- Headings  -------------------------------------------------- -->
-    <div class="container">
-      <!-- TODO: Meaningful nnames for the id attributes -->
-      <p id="para">One Account. All of Sirius Working For You.</p>
-      <h1 id="heading">Create Your Account</h1>
+    <!-- ---------------------- Start : header ---------------------- -->
+    <header>
+      <p>One Account. All of Sirius Working For You.</p>
+      <h1>Create Your Account</h1>
+    </header>
+    <!-- ----------------------- End : header ------------------------ -->
 
-    </div>
-
-    <!--  -------------------------------------------------- Start : Form creation  -------------------------------------------------- -->
+    <!-- ------------------ Start : Form creation -------------------- -->
     <form action="">
-<!-- TODO: Form need not have a container -->
-      <div class="container">
-        <!--TODO: Meaningfulname for class -->
-        <!-- name -->
-        <div class="fill">
-          <label for="name">Name</label><br>
-          <input class="input" type="text" name="name" id="name">
-        </div>
+      <!-- name -->
+      <div class="form_fields">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" class="form_input">
+      </div>
 
-        <!-- email address -->
-        <div class="fill">
-          <label for="email">Email Address</label><br>
-          <input class="input" type="email" name="email" id="email">
-        </div>
+      <!-- email address -->
+      <div class="form_fields">
+        <label for="email">Email Address</label><br>
+        <input type="email" name="email" id="email" class="form_input">
+      </div>
 
-        <!-- password -->
-        <div class="fill">
-          <label  for="password">Password</label><br>
-          <input class="input" type="password" name="password" id="password">
-        </div>
+      <!-- password -->
+      <div class="form_fields">
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" class="form_input">
+      </div>
 
-        <!-- contact number -->
-        <div class="fill">
-          <label  for="contact">Contact Number</label><br>
-          <input class="input" type="text" name="contact" id="contact">
-        </div>
+      <!-- contact number -->
+      <div class="form_fields">
+        <label for="contact">Contact Number</label><br>
+        <input type="text" name="contact" id="contact" class="form_input">
+      </div>
 
-        <!-- gender -->
-        <div class="fill">
-          <label  for="gender">Gender</label><br>
-          <select class="input" name="gender" id="gender">
-            <option value="gender" selected disabled>Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
-          </select>
-        </div>
+      <!-- gender -->
+      <div class="form_fields">
+        <label for="gender">Gender</label><br>
+        <select name="gender" id="gender" class="form_input">
+          <option value="gender" selected disabled>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
 
-        <!-- state -->
-        <div class="fill">
-          <label  for="state">State</label><br>
-          <select class="input" name="state" id="state">
-            <option value="Select State" selected disabled>Select State</option>
-            <option value="andhra">Andhra Pradesh</option>
-            <option value="odissa">Odissa</option>
-            <option value="maharastra">Maharastra</option>
-            <option value="tamil nadu">Tamil Nadu</option>
-            <option value="karnataka">Karnataka</option>
-            <option value="kerela">Kerela</option>
-          </select>
-        </div>
+      <!-- state -->
+      <div class="form_fields">
+        <label for="state">State</label><br>
+        <select name="state" id="state" class="form_input">
+          <option value="Select State" selected disabled>Select State</option>
+          <option value="andhra">Andhra Pradesh</option>
+          <option value="odissa">Odissa</option>
+          <option value="maharastra">Maharastra</option>
+          <option value="tamil nadu">Tamil Nadu</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="kerela">Kerela</option>
+        </select>
+      </div>
 
-        <!-- passport  radio button-->
-        <div class="fill">
-          <label for="radio-choice">Do you have Passport?</label>
-          <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1">
-          <label for="radio-choice-1">Yes</label>
+      <!-- passport  radio button-->
+      <div class="form_fields">
+        <label for="radio-choice">Do you have Passport?</label>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1">
+        <label for="radio-choice-1">Yes</label>
 
-          <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
-          <label for="radio-choice-2">No</label>
-        </div>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
+        <label for="radio-choice-2">No</label>
+      </div>
 
-        <!-- website url -->
-        <div class="fill">
-          <label  for="url">Your Website URL</label><br>
-          <input class="input" type="text" name="url" id="url">
-        </div>
+      <!-- website url -->
+      <div class="form_fields">
+        <label for="url">Your Website URL</label><br>
+        <input type="text" name="url" id="url" class="form_input">
+      </div>
 
-        <!-- terms and conditions checkbox -->
-        <div class="fill">
-          <input type="checkbox" name="checkbox" id="checkbox">
-          <label  for="checkbox"> I accept Terms & Conditions</label>
-        </div>
+      <!-- terms and conditions checkbox -->
+      <div class="form_fields">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox"> I accept Terms & Conditions</label>
+      </div>
 
-        <!-- sign up button -->
-        <div>
-          <input type="submit" class="button" value="SIGN UP" />
-        </div>
-
+      <!-- sign up button -->
+      <div>
+        <input type="submit" value="SIGN UP" class="submit">
       </div>
 
     </form>
-    <!--  -------------------------------------------------- End : Form creation   -------------------------------------------------- -->
+    <!-- ---------------------- End : Form creation   ------------------ -->
   </div>
-  <!-- -------------------------------------------------- End : Wrapper  --------------------------------------------------  -->
+  <!-- ---------------------- End : Wrapper ------------------------- -->
 </body>
 
 </html>
