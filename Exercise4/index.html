@@ -3,16 +3,16 @@
 
 <head>
 
-  <!--  -------------------------------------------------- Metadata  -------------------------------------------------- -->
+  <!--  ---------------------- Metadata ------------------- -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Exercise 4</title>
 
-  <!--  -------------------------------------------------- Google Fonts --------------------------------------------------  -->
+  <!-- -------------------- Google Fonts -------------------- -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-  <!--  -------------------------------------------------- CSS Stylesheet --------------------------------------------------  -->
+  <!--  ------------------- CSS Stylesheets --------------------- -->
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
@@ -20,110 +20,102 @@
 
 <body>
 
-  <!-- -------------------------------------------------- Start : Wrapper  --------------------------------------------------  -->
+  <!-- ------------------- Start : Wrapper ------------------- -->
   <div class="wrapper">
 
-    <!-- -------------------------------------------------- Start : Title Section -------------------------------------------------- -->
-    <!-- TODO:Cann be a normal div as section tag has a significance -->
-    <section id="title">
+    <!-- --------------------- Start : Header --------------------- -->
+    <header>
       <h1>ENCHANTING TAMIL NADU</h1>
-    </section>
-    <!--  -------------------------------------------------- End : Title Section --------------------------------------------------  -->
+      <div class="image"> </div>
+    </header>
+    <!-- --------------------- End : Header -------------------- -->
 
-    <!--  -------------------------------------------------- Start : Image Section  -------------------------------------------------- -->
-    <!-- TODO:Reduce usage of id in the code -->
-    <section id="image">
-      <div id="photo"> </div>
-    </section>
-    <!--  -------------------------------------------------- End : image Section --------------------------------------------------  -->
+    <!-- -------------------- Start : Image gallery ---------------------- -->
+    <section class="gallery">
 
-    <!--  -------------------------------------------------- Start : Image gallery --------------------------------------------------  -->
-    <section id="gallery">
-
-      <!--  -------------------------------------------------- Image1 and description --------------------------------------------------  -->
-      <div class="pic">
-        <img src="https://i.pinimg.com/originals/66/c9/f8/66c9f82cf8aaed0c311eea5f75d318c3.png" alt="img1" class="im">
-        <p class="desc">Never Ending Paddy Fields and Narrow Roads</p>
+      <!-- -------------------- Image1 and description ------------------- -->
+      <div class="gallery_item">
+        <img src="https://i.pinimg.com/originals/66/c9/f8/66c9f82cf8aaed0c311eea5f75d318c3.png" alt="img1">
+        <h1>Never Ending Paddy Fields and Narrow Roads</h1>
         <p class="place">Pollachi</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-          <!-- TODO:Type attribute missinng -->
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
-      <!-- Image2 and description -->
-      <div class="pic">
-        <img src="https://resources.matcha-jp.com/resize/720x2000/2018/06/07-55826.jpeg" alt="img2" class="im">
-        <p class="desc">Small Ride across town in mid summer heat</p>
+      <!-- -------------------- Image2 and description -------------------- -->
+      <div class="gallery_item">
+        <img src="https://resources.matcha-jp.com/resize/720x2000/2018/06/07-55826.jpeg" alt="img2">
+        <h1>Small Ride across town in mid summer heat</h1>
         <p class="place">Thanjavur</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
-      <!-- Image3 and description -->
-      <div class="pic">
-        <img src="https://img.lovepik.com/photo/40027/0020.jpg_wh860.jpg" alt="img3" class="im">
-        <p class="desc">Catching a short break at the Lotus Pond</p>
+      <!-- -------------------- Image3 and description -------------------- -->
+      <div class="gallery_item">
+        <img src="https://img.lovepik.com/photo/40027/0020.jpg_wh860.jpg" alt="img3">
+        <h1>Catching a short break at the Lotus Pond</h1>
         <p class="place">Madurai</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
-      <!-- Image4 and description -->
-      <div class="pic">
-        <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2015/09/road-to-matheran.jpg" alt="img4" class="im">
-        <p class="desc">Trip enroute the montains and forests</p>
+      <!-- -------------------- Image4 and description -------------------- -->
+      <div class="gallery_item">
+        <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2015/09/road-to-matheran.jpg" alt="img4">
+        <h1>Trip enroute the montains and forests</h1>
         <p class="place">Ooty</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
-      <!-- Image5 and description -->
-      <div class="pic">
-        <img src="https://thumbs.dreamstime.com/b/hindu-holy-temple-background-hinduholy-temple-mountain-background-151501743.jpg" alt="img5" class="im">
-        <p class="desc">Fall in love with the divine agraharams</p>
+      <!-- -------------------- Image5 and description -------------------- -->
+      <div class="gallery_item">
+        <img src="https://thumbs.dreamstime.com/b/hindu-holy-temple-background-hinduholy-temple-mountain-background-151501743.jpg" alt="img5">
+        <h1>Fall in love with the divine agraharams</h1>
         <p class="place">Rameyswarwm</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
-      <!-- Image6 and description -->
-      <div class="pic">
-        <img src="https://ak.picdn.net/shutterstock/videos/27570070/thumb/1.jpg" alt="img6" class="im">
-        <p class="desc">Energy driven through the windmills</p>
+      <!-- -------------------- Image6 and description -------------------- -->
+      <div class="gallery_item">
+        <img src="https://ak.picdn.net/shutterstock/videos/27570070/thumb/1.jpg" alt="img6">
+        <h1>Energy driven through the windmills</h1>
         <p class="place">Tirunelveli</p>
-        <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas ducimus, mollitia laudantium reiciendis! Quod omnis obcaecati, quia ab modi dignissimos. Numquam libero voluptas, dolor eum aperiam excepturi, omnis
           accusantium.</p>
-        <button class="button">READ MORE</button>
+        <input type="submit" class="button" value="READ MORE">
       </div>
 
     </section>
-    <!--  -------------------------------------------------- End : Image Gallery  -------------------------------------------------- -->
+    <!--  ------------------ End : Image Gallery --------------------- -->
 
-    <!--  --------------------------------------------------  Start : Content Section  -------------------------------------------------- -->
-    <section id="content">
+    <!--  ------------------  Start : description Section ----------------- -->
+    <div class="description">
       <h1>Many Wonders, One Emotion</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ratione, odio molestiae necessitatibus blanditiis id reiciendis ipsa asperiores amet odit molestias cupiditate corporis optio ad perferendis, veniam recusandae quasi ipsum
         similique eveniet. Sunt totam voluptatem culpa, similique repellat, distinctio nulla eum dolor minus libero, inventore doloribus quidem nam qui! Recusandae aliquam necessitatibus hic quam dolore quasi laboriosam corporis assumenda eveniet
         saepe omnis ex vero perspiciatis, aspernatur consequuntur culpa? Molestiae odit perspiciatis quaerat modi ea corporis blanditiis mollitia unde ut reiciendis expedita consectetur soluta ex, labore, non sit dicta cumque hic nam qui nobis optio
         facilis? Est, velit voluptates sapiente excepturi esse mollitia consequatur dignissimos, qui soluta, reprehenderit tempora quae veniam. Voluptatem minus, a dolorem dolorum accusantium. Cupiditate velit quos veritatis, ducimus fugiat nemo
         pariatur non porro! Ullam, blanditiis iure similique non impedit a deserunt animi fuga molestiae! Voluptate maxime optio vero dolorum expedita, commodi cumque quam quas, vitae sapiente dicta.</p>
-    </section>
-    <!--  -------------------------------------------------- End : Content Section  -------------------------------------------------- -->
+    </div>
+    <!--  -------------------- End : description Section ------------------ -->
 
-    <!--  -------------------------------------------------- Start : Copyright Section  -------------------------------------------------- -->
-    <section id="copyright">
+    <!--  --------------------- Start : Footer -------------------- -->
+    <footer>
       <h1>COPYRIGHTS 2020</h1>
       <p>Lorem ipsum dolor sit amet</p>
-    </section>
-    <!-- --------------------------------------------------  End : Copyright Section  -------------------------------------------------- -->
+    </footer>
+    <!-- ---------------------- End : Footer ---------------------- -->
 
   </div>
-  <!-- -------------------------------------------------- End : Wrapper  --------------------------------------------------  -->
+  <!-- ------------------------- End : Wrapper -----------------------  -->
 
 </body>
 
