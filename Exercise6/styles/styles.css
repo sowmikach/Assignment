@@ -1,145 +1,154 @@
-/* heading styling */
-.title{
-  background: #253081;
-  color: white;
+.wrapper{
   font-family: Roboto, sans-serif;
-  padding: 15px 180px;
 }
 
-.alignleft{
-  font-size: 1.4em;;
+.left{
   float:left;
 }
 
-.alignright{
-  padding-top: 4px;
+.right{
   float:right;
-  font-size: .9em;
 }
 
 .clearfix{
     clear:both;
 }
 
-/* cover page styling */
-.img_signin{
-  width:900px;
+.container{
+  width:80%;
+  /* width: 1000px; */
   margin:0 auto;
 }
-.coverp{
-  float: left;
-  margin: 30px auto;
-  width: 65%;
+/* -------------- Start : Header ------------- */
+header{
+  background: #253081;
+  color: white;
+  padding: 15px 0;
 }
 
-.img{
+.heading h1{
+  font-size: 1.4em;
+}
+
+.heading h3{
+  padding-top: 4px;
+  font-size: .9em;
+}
+/* -------------- End : Header ------------- */
+
+/* ---------------- Start : Cover page and Sign in form ----------------  */
+.img_signin{
+  margin: 30px auto;
+}
+
+/* ------------- cover page styling ---------------- */
+.cover_page{
+  width: 70%;
+}
+
+.cover_page img{
   width: 100%;
-  height: auto;
 }
 
-/* Sign in form styling */
-.register{
-  font-family: Roboto, sans-serif;
-  float: right;
+/* --------------- Sign in form styling -------------- */
+.sign_in{
   background: #ecdfec;
-  padding: 30px 20px;
-  margin: 30px auto;
-  width: 30%;
+  padding: 35px 20px;
+  width: 25%;
 }
 
-.acc{
-  font-size: 0.8em;
-  margin-bottom: 10px;
+.sign_in .details{
+  font-size: 0.9em;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
-.signin{
-  font-size: 1.2em;
-  margin-bottom: 7px;
+.sign_in h1{
+  font-size: 1.6em;
+  margin-bottom: 8px;
   font-weight: 500;
 }
 
 input[type=text], input[type=password] {
  width: 100%;
  padding: 12px 20px;
- margin: 8px 0;
- display: inline-block;
- border: 1px solid #ccc;
+ margin: 7px 0;
+ border:none;
  box-sizing: border-box;
 }
 
-.button {
+input[type=submit]{
   background-color: #c61aff;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
+  margin-top: 7px;
   margin-bottom: 20px;
   border: none;
   cursor: pointer;
   width: 100%;
 }
 
-.button:hover {
+input[type=submit]:hover {
   opacity: 0.8;
 }
 
-.details {
-font-size: .7em;
+input[type=submit] + p{
+font-size: .8em;
 }
 
-.details a{
+input[type=submit] + p a{
 text-decoration: none;
 color: black;
 }
+/* ---------------- End : Cover page and Sign in form ----------------  */
 
 
-/* Content styling */
-.content{
+/* ---------------- Start : Description div block ----------------  */
+
+.description{
   background: #c61aff;
-  float:left;
-  font-family:Roboto , sans-serif;
-  overflow: hidden;
-  padding: 20px;
-  margin: 0 180px 30px 180px;
-  width:900px;
-  display: inline-table;
+  color:#fff;
+  /* padding: 30px; */
 }
 
-.content h1{
+.description .title{
   text-align: center;
   color: white;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 10px;
+  font-size: 2em;
+  font-weight: 800px;
+  padding: 20px;
+  letter-spacing: 2px;
 }
 
-.content img{
-  float: left;
-  width: 150px;
-  height:150px;
-  margin-right: 30px;
+.photo{
+    width:25%;
+    padding:30px 30px 40px 40px;
+}
+.photo img{
+  width: 100%;
+  height: auto;
 }
 
-.para{
-  color: #f2f2f2;
-  float:right;
-  line-height: 1.2;
-  text-align: justify;
-  padding:20px;
-
+.content{
+    width:64%;
+    text-align: justify;
+    padding:30px 40px 40px 0;
+    line-height: 1.2;
+    color: #ccc;
 }
+/* ---------------- End : Description div block ----------------  */
 
-
-/* About us styling */
+/* ---------------- Start : Footer ----------------------- */
 .row{
-  float:left;
-  font-family:Roboto , sans-serif;
-  width: 900px;
-  margin: 0 185px 30px 185px;
+  margin: 30px auto;
 }
-
 .column{
-  float: left;
-  width: 25%;
+  width: 20%;
+  margin-right:80px;
+}
+.column:nth-child(4){
+  width: 15%;
+  margin-right: 0;
 }
 
 .column h2{
@@ -152,3 +161,4 @@ color: black;
   font-weight: 300;
   line-height: 1.5;
 }
+/* ---------------- End : Footer ----------------------- */
