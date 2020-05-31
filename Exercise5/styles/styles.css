@@ -1,21 +1,23 @@
-/* heading */
+.wrapper{
+    font-family: Roboto, sans-serif;
+}
+/*-------------- Title -------------------*/
 .heading{
   text-align: center;
 }
 
+
 .title{
   background: #007399;
   color: white;
-  font-family: Roboto, sans-serif;
   font-size: 1.2em;
   padding: 20px;
 }
 
-/* div blocks styling */
+/*----------------- Start : div blocks styling ---------------------*/
 .container{
   margin: 30px auto;
   width: 90%;
-  font-family: Roboto, sans-serif;
 }
 
 .content{
@@ -24,16 +26,22 @@
   padding: 12px;
 }
 
-.left{
-  float: left;
+.news_channel{
   border: 1px solid #007399;
   margin-bottom: 10px;
+}
+
+.left{
+  float: left;
   width: 60%;
 }
 
 .right{
   float: right;
-  border: 1px solid #007399;
-  margin-bottom: 10px;
   width: 38.5%;
 }
+
+.clear-fix{
+  clear: both;
+}
+/*----------------- End : div blocks styling ---------------------*/
