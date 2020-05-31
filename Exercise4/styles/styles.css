@@ -1,5 +1,8 @@
-/* Title section */
-#title{
+.wrapper{
+  font-family: Roboto, sans-serif;
+}
+/* --------------- Start : Header ----------------*/
+header h1{
   background: #5B3256;
   color: white;
   text-align: center;
@@ -9,8 +12,7 @@
   padding: 20px;
 }
 
-/* Image section */
-#photo{
+.image{
   background-image: url("https://www.greenandvibrant.com/sites/default/files/inline-images/types-of-coconuts/King-Coconut.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -18,29 +20,32 @@
   background-clip: border-box;
   height: 500px;
 }
+/* --------------- End : Header ----------------*/
 
-/* Image gallery section */
-#gallery{
-  margin:30px auto 30px;
-  font-family: Roboto, sans-serif;
+/*----------------- Start : Image gallery section ------------- */
+.gallery{
+  margin:30px auto 20px;
   width:90%;
 }
-
- .pic{
-  width:31.1%;
-  height : auto;
+ .gallery_item{
+  width:31.7%;
+  height: auto;
   display: inline-block;
-  margin:10px 10px 20px;
+  margin:20px 20px 10px 0;
   vertical-align: top;
 }
 
-.im{
+.gallery_item:nth-child(3n){
+  margin-right: 0;
+}
+
+.gallery_item img{
   height: 200px;
   margin-bottom: 10px;
   width:100%;
 }
 
-.desc{
+.gallery_item h1{
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -50,7 +55,7 @@
   margin-bottom: 15px;
 }
 
-.contents{
+.place+p{
   margin-bottom: 15px;
 }
 
@@ -64,36 +69,43 @@
   font-size: 15px;
   cursor: pointer;
 }
+/*----------------- Start : Image gallery section ------------- */
 
-/* Content Section */
-#content{
-  font-family: Roboto, sans-serif;
+/*----------------- Start : Description block ------------- */
+.description{
   width:80%;
-  margin:50px auto 30px;
+  margin:30px auto;
 }
 
-#content h1{
+.description h1{
   color: #5B3256;
   font-size: 2em;
   text-align: center;
   margin-bottom: 20px;
 }
 
-#content p{
+.description p{
   color: #A9A9A9;
   text-align: justify;
   line-height: 1.6;
 }
+/*----------------- End : Description block ------------- */
 
-
-/* Copyright Section */
-#copyright {
+/*----------------- Start : Footer ------------- */
+footer{
   background: #5B3256;
   color: white;
-  font-family: Roboto, sans-serif;
-  padding: 15px 40px;
+  padding: 15px 0;
 }
 
-#copyright h1{
+footer h1{
   font-weight: bold;
+  width: 90%;
+  margin: auto;
 }
+
+footer p{
+  width: 90%;
+  margin: auto;
+}
+/*----------------- End : Footer ------------- */
