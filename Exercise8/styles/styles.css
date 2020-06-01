@@ -1,0 +1,68 @@
+.wrapper{
+    font-family: Roboto, sans-serif;
+}
+/*-------------- Title -------------------*/
+.heading{
+  text-align: center;
+}
+
+
+.title{
+  background: #007399;
+  color: white;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+/*----------------- Start : div blocks styling ---------------------*/
+.container{
+  margin: 30px auto;
+  width: 90%;
+}
+
+.content{
+  text-align: justify;
+  line-height: 1.2;
+  padding: 12px;
+}
+
+.news_channel{
+  border: 1px solid #007399;
+  margin-bottom: 10px;
+}
+
+.left{
+  float: left;
+  width: 60%;
+}
+
+.right{
+  float: right;
+  width: 38.5%;
+}
+
+.clear-fix{
+  clear: both;
+}
+/*----------------- End : div blocks styling ---------------------*/
+@media only screen and (max-width:900px){
+
+  .left{
+    width: 49%;
+  }
+  .right{
+    width: 49%;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .left{
+    float:none;
+    width: 100%;
+  }
+  .right{
+    float: none;
+    width: 100%;
+  }
+}
