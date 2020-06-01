@@ -1,0 +1,135 @@
+.wrapper{
+  font-family: 'Open Sans';
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.clear-fix{
+  clear: both;
+}
+/*-------------------- Start : Header -------------------------*/
+header{
+    padding:20px;
+    background: rgb(206,11,36);
+    color:#fff;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+/*-------------------- End : Header -------------------------*/
+
+/* ------------------ Start : Twitter and Facebook div blocks -------------- */
+.container{
+  width: 60%;
+  margin: 30px auto;
+}
+
+.title{
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.box_wrapper{
+  width: 28%;
+  margin-right: 10px;
+}
+.box_wrapper li{
+  padding: 10px;
+}
+.box_wrapper li:nth-child(-n+2){
+  font-weight: bold;
+}
+.box_wrapper li:nth-child(2n){
+  background: #E8E8E8;
+}
+
+.twitter{
+  background: rgb(19,133,178);
+}
+
+.twitter_cover li{
+  border-left: 1px solid rgb(19,133,178);
+  border-right: 1px solid rgb(19,133,178);
+}
+
+.twitter_cover li:nth-last-child(1){
+  border-bottom: 1px solid rgb(19,133,178);
+}
+
+.facebook{
+  background: rgb(60,90,150);
+}
+
+.facebook_cover li{
+  border-left: 1px solid rgb(60,90,150);
+  border-right: 1px solid rgb(60,90,150);
+}
+.facebook_cover li:nth-last-child(1){
+  border-bottom: 1px solid rgb(60,90,150);
+}
+/* ------------------ End : Twitter and Facebook div blocks -------------- */
+
+/* ------------------ Start : Google Search form -------------- */
+.search{
+  width: 37%;
+  background: #E8E8E8;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+.search h3{
+  text-align: center;
+  color: rgb(206,11,36);
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+input[type=text]{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px auto;
+  border: none;
+  padding: 10px;
+}
+
+input[type=submit]{
+  box-sizing: border-box;
+  background: rgb(206,11,36);
+  color: white;
+  margin:  auto;
+  border: none;
+  padding: 10px 15px;
+}
+/* ------------------ End : Google Search form -------------- */
+
+/* ------------------ Start : Browsers div block -------------- */
+.browsers a{
+  color: black;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding:0 10px;
+  font-size: .9em;
+}
+
+.browsers a:nth-child(1){
+  padding-left: 0;
+}
+
+.browsers a:nth-last-child(1){
+  border-right: none;
+}
+
+.browsers a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+/* ------------------ End : Browsers div block -------------- */
