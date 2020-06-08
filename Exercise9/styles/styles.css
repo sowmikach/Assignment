@@ -34,24 +34,26 @@ header{
   border-radius: 50%;
   position:relative;
 }
+.profile .profile_text {
+  visibility: hidden;
+  width: 200px;
+  top: 53px;
+  right: 5px;
+  padding:10px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+}
 
-.profile ul{
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: 200px;
-    top: 60px;
-    right: 5px;
-    padding:10px;
-    background-color: white;
-}
 .profile:hover{
-  cursor: pointer;
+    cursor:pointer;
 }
-.profile:hover ul{
-  display: block;
+
+.profile:hover .profile_text {
+  visibility: visible;
 }
-.profile li{
+
+.profile_text li{
   font-weight: 500;
   padding: 10px;
 }
@@ -89,7 +91,7 @@ header{
   height: 200px;
 }
 
-.product_letter{
+.product_size{
   width:30px;
   height:30px;
   position: absolute;
@@ -98,13 +100,11 @@ header{
   right: 15px;
   padding: 5px;
   font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 30px;
 }
 
-.align{
-  position: absolute;
-  top:12px;
-  left: 15px;
-}
 
 .product_name{
   font-size: 1.2em;
@@ -114,7 +114,8 @@ header{
 
 .product_price{
   color: gray;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .add_to_cart{
@@ -122,6 +123,7 @@ header{
   padding: 7px 12px;
   color: gray;
   background: #2A2B30;
+  margin-bottom: 30px;
 }
 
 .add_to_cart:hover{
