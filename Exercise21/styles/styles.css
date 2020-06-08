@@ -1,0 +1,254 @@
+body {
+  background: black;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px auto;
+  width: 85%;
+}
+
+/* ----------------- Start : Header ---------------- */
+header p {
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  visibility: visible;
+}
+
+header div {
+  color: white;
+  margin: 60px auto;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 6em;
+  padding: 15px;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+header h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+header h3 span {
+  color: #50A6C2;
+}
+
+header .mailid {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  visibility: hidden;
+}
+
+/* ----------------- End : Header ---------------- */
+
+/* ----------------- Start : Gallery ---------------- */
+.gallery {
+  display: flex;
+  margin: 80px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery>div {
+  width: 31.8%;
+  margin: 10px;
+}
+
+.gallery>div:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.gallery>div:nth-child(3n+1) {
+  margin-left: 0px;
+}
+
+.gallery>div img {
+  width: 100%;
+  height: 350px;
+}
+
+/* ----------------- End : Gallery ---------------- */
+
+/* ----------------- Start : Brands ---------------- */
+.brands_title {
+  margin: 40px auto;
+}
+
+.brands_title h1 {
+  color: #dfe0dc;
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.brands_title h1 span {
+  color: #9fc75f;
+}
+
+.brands {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.brands>div {
+  width: 16.6%;
+  padding: 25px;
+}
+
+.brands>div img {
+  width: 100%;
+  height: auto;
+}
+
+.brands>div:first-child {
+  padding-left: 0;
+}
+
+/* ----------------- End : Brands ---------------- */
+
+/* ----------------- Start : Footer ---------------- */
+.lines {
+  display: flex;
+}
+
+.line_styling1 {
+  width: 3%;
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+}
+
+.line_styling {
+  width: 15%;
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  margin-left: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.bg_circle {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 27px;
+  height: 27px;
+  position: relative;
+  margin-right: 15px;
+}
+
+.icon {
+  color: white;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  vertical-align: middle;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: .9em;
+  margin-bottom: 60px;
+}
+/* ----------------- End : Footer ---------------- */
+
+/* ----------------- Start : Media quries ---------------- */
+@media screen and (max-width: 500px) {
+
+  /* ----------------- Start : Header ---------------- */
+  header p {
+    visibility: hidden;
+  }
+
+  header .mailid {
+    visibility: visible;
+  }
+
+  header h1 {
+    font-size: 3.6em;
+  }
+
+  header h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+
+  /* ----------------- End : Header ---------------- */
+  /* ----------------- Start : Gallery ---------------- */
+  .gallery>div {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .gallery>div img {
+    height: 450px;
+  }
+
+  /* ----------------- End : Gallery ---------------- */
+
+  /* ----------------- Start : Brands ---------------- */
+  .brands {
+    flex-wrap: wrap;
+  }
+
+  .brands>div {
+    width: 42%;
+    padding: 35px 0;
+    margin: 10px 0;
+  }
+
+  .brands>div:nth-child(2n+1) {
+    margin-right: 40px;
+  }
+
+  /* ----------------- End : Brands ---------------- */
+
+  /* ----------------- Start : Footer ---------------- */
+  .line_styling1 {
+    width: 9%;
+  }
+
+  .line_styling {
+    width: 29%;
+  }
+
+  .flex-container {
+    justify-content: space-between;
+  }
+
+  .bg_circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    left: 9px;
+    top: 9px;
+    font-size: 2em;
+  }
+
+  footer p {
+    font-size: 1.6em;
+  }
+  /* ----------------- End : Footer ---------------- */
+
+}
+/* ----------------- End : Media quries ---------------- */
