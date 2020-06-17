@@ -1,0 +1,88 @@
+.wrapper{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*  ----------------------- START : MAIN PAGE --------------------- */
+.food{
+  width:80%;
+  margin-top: 120px;
+  font-size: 2em;
+}
+
+.menu_title{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.flex-contanier{
+  display: flex;
+  justify-content: center;
+}
+.food_item{
+  margin: 10px;
+  width: 160px;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.chooseBiryani{
+  background: #de0b39;
+}
+
+.choosePizza{
+  background: #5b95cf;
+}
+/*  ----------------------- END : MAIN PAGE --------------------- */
+
+/*  ----------------------- START : BIRYANI AND PIZZA --------------------- */
+.menu_items li{
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  padding: 10px 15px;;
+  width: 400px;
+}
+
+.biryaniVarieties li{
+  background: #de0b39;
+}
+
+.pizzaVarieties li{
+  background: #5b95cf;
+}
+
+.back{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+/*  ----------------------- END : BIRYANI AND PIZZA --------------------- */
+
+/*  ----------------------- START : CART --------------------- */
+.cart{
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #E8E8E8;
+}
+
+.cart div{
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 25px;
+  text-align: center;
+}
+
+#addToCart li{
+  cursor: pointer;
+  padding:15px 20px;
+  margin:10px;
+  border: 1px solid black;
+}
+
+/*  ----------------------- END : CART --------------------- */

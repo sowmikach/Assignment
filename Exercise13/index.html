@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Exercise 13</title>
+
+  <!-------------------  CSS Stylesheets  -------------------->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/reset.css">
+
+  <!-- ------------------ Google Fonts ------------------- -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!------------------- START : WRAPPER -------------------->
+  <div class="wrapper">
+
+    <!------------------- START : MAIN PAGE -------------------->
+    <div class="food" id="food">
+      <div class="menu_title">MENU</div>
+      <div class="flex-contanier">
+        <div class="chooseBiryani food_item" id="chooseBiryani">BIRYANI</div>
+        <div class="choosePizza food_item" id ="choosePizza">PIZZAS</div>
+      </div>
+    </div>
+    <!------------------- END : MAIN PAGE -------------------->
+
+    <!------------------- START : BIRYANI -------------------->
+    <div class="food" id="biryani">
+      <div class="menu_title">BIRYANI</div>
+      <div class="flex-contanier">
+        <ul class="biryaniVarieties menu_items" id="biryaniVarieties"></ul>
+        </div>
+        <div class="back" id="back_b">BACK TO MENU</div>
+
+    </div>
+    <!------------------- END : BiRYANI -------------------->
+
+    <!------------------- START : PIZZA -------------------->
+    <div class="food" id="pizza" >
+      <div class="menu_title">PIZZA</div>
+      <div class="flex-contanier">
+        <ul class="pizzaVarieties menu_items" id="pizzaVarieties" ></ul>
+      </div>
+        <div class="back" id="back_p">BACK TO MENU</div>
+    </div>
+    <!------------------- END : PIZZA -------------------->
+
+    <!------------------- START : CART -------------------->
+    <div class="cart">
+      <div>CART</div>
+      <ul id="addToCart"></ul>
+    </div>
+    <!------------------- END : CART -------------------->
+
+  </div>
+  <!------------------- END : WRAPPER -------------------->
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>
