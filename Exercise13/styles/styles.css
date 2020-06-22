@@ -24,6 +24,7 @@
   text-align: center;
   color: white;
   padding: 100px 20px;
+  /* Display,width,height,position - Keep these properties at the topmost priority i the css.Kindly apply this to every class/property */
   display: inline-block;
   cursor: pointer;
 }
