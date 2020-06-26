@@ -5,13 +5,12 @@
 
   <title>Exercise 13</title>
 
+  <!-- ------------------ Google Fonts ------------------- -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
   <!-------------------  CSS Stylesheets  -------------------->
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/reset.css">
-    <!-- TODO: Include fonts before css -->
-
-  <!-- ------------------ Google Fonts ------------------- -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -19,46 +18,29 @@
 
   <!------------------- START : WRAPPER -------------------->
   <div class="wrapper">
-    <!-- TODO: Better naming for id -->
-    <!-- TODO: Try to reduce content in html and make everything from JS end. -->
 
-    <!------------------- START : MAIN PAGE -------------------->
-    <div class="food" id="food">
-      <div class="menu_title">MENU</div>
-      <div class="flex-contanier">
-        <div class="chooseBiryani food_item" id="chooseBiryani">BIRYANI</div>
-        <div class="choosePizza food_item" id ="choosePizza">PIZZAS</div>
+    <div class="menu">
+
+      <div id="menu">
+        <h1 class="menu-title">Menu</h1>
       </div>
-    </div>
-    <!------------------- END : MAIN PAGE -------------------->
 
-    <!------------------- START : BIRYANI -------------------->
-    <div class="food" id="biryani">
-      <div class="menu_title">BIRYANI</div>
-      <div class="flex-contanier">
-        <ul class="biryaniVarieties menu_items" id="biryaniVarieties"></ul>
+      <div id="menu-categories">
+        <h1 id="title" class="menu-title"></h1>
+        <div class="flex-container">
+          <ul id="menu_items_list">
+          </ul>
         </div>
-        <div class="back" id="back_b">BACK TO MENU</div>
-
-    </div>
-    <!------------------- END : BiRYANI -------------------->
-
-    <!------------------- START : PIZZA -------------------->
-    <div class="food" id="pizza" >
-      <div class="menu_title">PIZZA</div>
-      <div class="flex-contanier">
-        <ul class="pizzaVarieties menu_items" id="pizzaVarieties" ></ul>
+        <div class="back-btn" id="back-btn">Back To Menu</div>
       </div>
-        <div class="back" id="back_p">BACK TO MENU</div>
-    </div>
-    <!------------------- END : PIZZA -------------------->
 
-    <!------------------- START : CART -------------------->
-    <div class="cart">
-      <div>CART</div>
-      <ul id="addToCart"></ul>
     </div>
-    <!------------------- END : CART -------------------->
+
+    <div class="cart">
+      <h1>CART</h1>
+      <ul id="cart_items">
+      </ul>
+    </div>
 
   </div>
   <!------------------- END : WRAPPER -------------------->
