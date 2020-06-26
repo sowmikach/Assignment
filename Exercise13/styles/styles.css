@@ -3,42 +3,43 @@
 }
 
 /*  ----------------------- START : MAIN PAGE --------------------- */
-.food{
+.menu{
   width:80%;
   margin-top: 120px;
   font-size: 2em;
+  text-transform: uppercase;
 }
 
-.menu_title{
+.menu-title{
   text-align: center;
   padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.flex-contanier{
+.flex-container{
   display: flex;
   justify-content: center;
 }
-.food_item{
-  margin: 10px;
+.menu-categories{
   width: 160px;
+  margin: 10px;
   text-align: center;
   color: white;
   padding: 100px 20px;
-  /* Display,width,height,position - Keep these properties at the topmost priority i the css.Kindly apply this to every class/property */
-  display: inline-block;
   cursor: pointer;
+  text-transform: uppercase;
 }
-.chooseBiryani{
+.biryani{
   background: #de0b39;
 }
 
-.choosePizza{
+.pizza{
   background: #5b95cf;
 }
 /*  ----------------------- END : MAIN PAGE --------------------- */
 
 /*  ----------------------- START : BIRYANI AND PIZZA --------------------- */
-.menu_items li{
+.menu-items-list li{
   cursor: pointer;
   color: white;
   margin: 10px;
@@ -54,10 +55,11 @@
   background: #5b95cf;
 }
 
-.back{
+.back-btn{
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  margin-top: 10px;
   cursor: pointer;
 }
 /*  ----------------------- END : BIRYANI AND PIZZA --------------------- */
@@ -72,18 +74,20 @@
   background-color: #E8E8E8;
 }
 
-.cart div{
+.cart h1{
   font-size: 1.4em;
   font-weight: 600;
   margin: 25px;
   text-align: center;
 }
 
-#addToCart li{
+#cart_items li{
   cursor: pointer;
   padding:15px 20px;
   margin:10px;
   border: 1px solid black;
+  text-transform: uppercase;
 }
 
 /*  ----------------------- END : CART --------------------- */
+
