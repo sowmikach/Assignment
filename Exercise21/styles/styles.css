@@ -59,8 +59,8 @@ header .mailid {
 }
 
 .gallery>div {
-  /* width:calc(100%/3.12); */
-  width: calc(100% - 730px);
+  width:calc(100%/3.12); 
+  /* width: calc(100% - 730px); */
   margin: 10px;
 }
 
