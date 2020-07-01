@@ -3,7 +3,7 @@ body{
 }
 
 .wrapper{
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
   font-family: 'Open-Sans',sans-serif;
   text-transform: uppercase;
@@ -14,31 +14,31 @@ body{
 }
 
 .logo img{
-  width: 20%;
+  width: 24%;
 }
 /* ------------- End : logo ------------ */
 
 /* ------------- Start : Movie Wrapper ------------ */
-.movies-list{
+.movies-list-items{
   display:inline-block;
-  width: calc((100% - 90px)/4);
+  width: calc((100% - 132px)/4);
   vertical-align: top;
   position: relative;
-  margin: 15px;
-  margin-bottom: 40px;
+  margin: 22px;
+  margin-bottom: 30px;
 }
 
-.movies-list:nth-child(4n){
+.movies-list-items:nth-child(4n){
   margin-right: 0;
 }
 
-.movies-list:nth-child(4n+1){
+.movies-list-items:nth-child(4n+1){
   margin-left: 0;
 }
 
 .poster img{
   width:100%;
-  height:350px;
+  height:330px;
 }
 
 .year{
@@ -59,13 +59,15 @@ body{
     height:40px;
     background: red;
     border-radius: 50%;
-    right:13px;
-    top:6px;
+    right:10px;
+    top:10px;
 }
 
-.adultTag{
+.adult-tag{
     position:absolute;
     left:15px;
     top:12px;
+    color:white;
+    font-weight: bold;
 }
 /* ------------- End : Movie wrapper ------------ */
