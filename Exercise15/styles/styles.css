@@ -1,0 +1,54 @@
+.wrapper{
+  width: 22%;
+  margin: 40px auto;
+  font-family: 'Open-Sans',sans-serif;
+}
+
+input[type=number]{
+width:61%;
+padding:5px 10px;
+margin:5px 0 5px 10px;
+}
+
+p{
+  margin-left: 68px;
+}
+
+/*------------ Start : Heading -------------- */
+.title{
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+/*------------ End : Heading -------------- */
+
+/*------------ Start : Form -------------- */
+.calc-form{
+  background: rgb(88,226,194);
+  padding: 20px;
+}
+
+.num-label{
+  color: rgb(187,10,34);
+  font-weight: bold;
+}
+
+#add,#mul,#sub{
+  background: rgb(187,10,34);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 4px;
+}
+
+#add{
+  margin-left: 68px;
+}
+
+.result{
+  margin-top: 10px;
+  margin-left: 68px;
+  font-weight: bold;
+}
+/*------------ End : form -------------- */
