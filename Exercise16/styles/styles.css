@@ -1,0 +1,11 @@
+.wrapper{
+  width: 20%;
+  margin: 20px auto;
+}
+input[type=number],.counterbutton{
+    width: 100px;
+    font-size: 5em;
+    vertical-align: top;
+    text-align: center;
+    box-sizing: border-box;
+}
