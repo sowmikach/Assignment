@@ -1,0 +1,174 @@
+body {
+  background: rgb(65, 44, 71);
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Open-Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ------------- Start : logo ------------ */
+.logo {
+  margin: 30px auto;
+}
+
+.logo img {
+  width: 24%;
+}
+
+/* ------------- End : logo ------------ */
+/* ------------- Start : Movie Wrapper ------------ */
+.movies-list-items {
+  display: inline-block;
+  width: calc((100% - 132px)/4);
+  vertical-align: top;
+  position: relative;
+  margin: 22px;
+  margin-bottom: 30px;
+}
+
+.movies-list-items:nth-child(4n) {
+  margin-right: 0;
+}
+
+.movies-list-items:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+.poster img {
+  width: 100%;
+  height: 330px;
+}
+
+.year {
+  color: #F5F5F5;
+  margin-top: 13px;
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-top: 6px;
+}
+
+.adult {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+}
+
+.adult-tag {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ------------- End : Movie wrapper ------------ */
+
+/* -------------------- Start : Popup Section -------------- */
+#popWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.pop_description {
+  font-family: 'Open-Sans', sans-serif;
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 60%;
+  bottom: 25%;
+  background: rgb(255, 255, 255);
+  z-index: 1;
+  display: block;
+  overflow: scroll;
+}
+
+.pop_description>div {
+  position: absolute;
+  top: 28px;
+  left: 11px;
+}
+
+#popImgWrapper {
+  position: relative;
+  display: inline-block;
+  width: 35%;
+  margin: 20px 0px 0px 20px;
+  color: #fff;
+}
+
+#popImg {
+  width: 100%;
+}
+
+#movieDescription {
+  display: inline-block;
+  width: 55%;
+  height: auto;
+  margin-left: 20px;
+  vertical-align: top;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+#titlewrap {
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+#langdiv {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 50%;
+  background-color: rgb(77, 145, 221);
+  position: relative;
+}
+
+#langdiv div {
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  text-transform: uppercase;
+}
+
+#closeicon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+#thumbsupIconDiv {
+  color: rgb(77, 145, 221);
+  margin-top: 7px;
+}
+
+#thumbsupIconDiv i {
+  float: left;
+}
+
+#thumbsupIconDiv div {
+  margin-left: 5px;
+  float: left;
+}
+
+/* --------------------End : Popup Section -------------- */
