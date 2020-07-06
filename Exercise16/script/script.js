@@ -4,10 +4,12 @@ var changeValue = (function(){
     var counterValue = 0;
 
     //METHOD : increment
-    return function increment(){
+    function increment(){
         counterValue += 1;
-        //return the count
-        document.getElementById("counterVal").value=counterValue;
-    };
+        return counterValue;
+    }
+    return increment;  
 })();
-//Add click event listener and invoke the closure here, display the count in the event listener
+document.getElementById("counterButton").addEventListener("click",function(){
+  document.getElementById("counterVal").value=changeValue();
+});
