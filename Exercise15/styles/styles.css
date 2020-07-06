@@ -33,7 +33,7 @@ p{
   color: rgb(187,10,34);
   font-weight: bold;
 }
-
+/* //preferrabbly use a class */
 #add,#mul,#sub{
   background: rgb(187,10,34);
   color: white;

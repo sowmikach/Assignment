@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+//Can we try this using AJAX call ?
 (function(){
   for(let i=0;i<movies.length;i++){
 

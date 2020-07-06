@@ -18,9 +18,9 @@ var cart = "";
     document.getElementById("menu").style.display = "block";
     document.getElementById("menu-categories").style.display = "none";
   });
-
-  document.getElementById("Biryani").onclick = displayBiryaniMenu;
-  document.getElementById("Pizza").onclick = displayPizzaMenu;
+//TODO: Make the code more generic. Example is provided
+  document.getElementById("Biryani").onclick = function(){displayMenu('Biriyani',biryani_items,"biryaniVarieties")};
+  document.getElementById("Pizza").onclick = function(){displayMenu('Pizza',pizza_items,"pizzaVarieties")};
 
 
   function displayBiryaniMenu() {
@@ -50,12 +50,30 @@ var cart = "";
     document.getElementById("back-btn").addEventListener("click", myFunc);
   }
 
+  function displayMenu(title,items,className) {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("menu-categories").style.display = "block";
+    document.getElementById("title").innerHTML = title;
+    let str = "";
+    for (let i = 0; i < items.length; i++) {
+      str += "<li id=" + i + " onClick='addToCart_biryani(this.id)'>" + items[i] + "</li>";
+    }
+    document.getElementById("menu_items_list").innerHTML = str;
+    document.getElementById("menu_items_list").classList.add("menu-items-list", className);
+    document.getElementById("back-btn").addEventListener("click", myFunc);
+  }
   function myFunc() {
     document.getElementById("menu").style.display = "block";
     document.getElementById("menu-categories").style.display = "none";
   }
 
 })();
+
+function addToCart(value) {
+  cart += "<li>" + value + "</li>";
+  //Explore the append function
+  document.getElementById("cart_items").innerHTML = cart;
+}
 
 function addToCart_biryani(value) {
   cart += "<li>" + biryani_items[value] + "</li>";

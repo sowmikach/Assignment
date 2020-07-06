@@ -6,6 +6,8 @@ var changeValue = (function(){
     //METHOD : increment
     return function increment(){
         counterValue += 1;
+        //return the count
         document.getElementById("counterVal").value=counterValue;
     };
 })();
+//Add click event listener and invoke the closure here, display the count in the event listener
