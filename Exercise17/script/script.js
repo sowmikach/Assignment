@@ -1,6 +1,20 @@
 //jshint esversion:6
 //Can we try this using AJAX call ?
-(function(){
+//mocky.io
+document ready (){
+  ajax call("get"){
+    sucesss(){
+      // call the function that builds the UI
+//pass the response from API->movies
+    }
+    error(){
+// Console the error
+    }
+  }
+}
+
+//named function
+function constructUI(){
   for(let i=0;i<movies.length;i++){
 
     let div=document.createElement("div");
@@ -51,4 +65,4 @@
 
     document.getElementById("movies-wrapper").append(div);
   }
-})();
+};
