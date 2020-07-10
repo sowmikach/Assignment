@@ -1,4 +1,17 @@
 //jshint esversion:6
+//jQuery AJAX and content loaded
+
+// $("#movies-list").append('<li><div class="movies-list-items"><div class="poster"><a href="#pop_description0" onclick="displayPopup('+movie.index+');"><img src="'+movie.imageUrl+'"></a></div><div class="year">2013</div><div class="title">Frozen</div></div></li>')
+// $.ajax({
+//   method:'GET',
+//   url:'https://run.mocky.io/v3/a019288e-55b9-4731-86ef-0c9b9251e596',
+//   success:function(moviesList){
+//     displayMovies(moviesList);
+//   },
+//   error:function(){
+//     console.error('Errro in AJAX call')
+//   }
+// })
 
 $(document).ready(function(){
   var ourRequest = new XMLHttpRequest();
@@ -27,6 +40,9 @@ function displayMovies(movies){
     /* ------------------ Start : Movie Poster --------------*/
     let imgDiv = document.createElement("div");
     imgDiv.setAttribute("class","poster");
+    // let $imgDiv = $("<div class='poster'></div>")
+    // <a href="dfsgdfgsdf" onclick="sadfsdfsdf">
+    // let $imageButton= $("<a href=#pop_description"+i+"'"+" onclick='displayPopup("+i+")'></a>")
     var imageButton = document.createElement("a");
     imageButton.setAttribute("href","#pop_description"+i+"");
     imageButton.setAttribute("onclick","displayPopup("+i+");");
@@ -73,7 +89,13 @@ function displayMovies(movies){
 }
 
 // ---------------- Method : Display Popup ---------------------
- function displayPopup(i){
+/**
+ * @function displayPopup
+ * @param {number} index - Index of the movie item that was clicked
+ * @return {number} index - Index of the movie item that was clicked
+ */
+
+ function displayPopup(index){
      document.getElementById("movies-wrapper").style.opacity="0.3";
      document.body.style.overflow="hidden";
 
