@@ -13,6 +13,7 @@
 //   }
 // })
 
+//Dummy commennt
 $(document).ready(function(){
   var ourRequest = new XMLHttpRequest();
   ourRequest.open('GET','https://run.mocky.io/v3/a019288e-55b9-4731-86ef-0c9b9251e596');
