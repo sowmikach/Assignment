@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 19</title>
+
+
+  <!-- ------------------ Google Fonts ------------------- -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+
+  <!-- --------------------- Font Awesome --------------------- -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  <!-------------------  CSS Stylesheets  -------------------->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/reset.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <!-------------------  Start : Wrapper  -------------------->
+  <div class="wrapper">
+
+    <!-------------------  Start : Icons  -------------------->
+    <div class="icons">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </div>
+    <!-------------------  End : Icons  -------------------->
+
+    <!-------------------  Start : Header  -------------------->
+    <header class="heading">
+      <div class="logo left">
+        <img src="images/logo.png" alt="learn era logo">
+      </div>
+      <form class="search-container">
+        <input type="text" placeholder="Search" class="search-text" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="clearfix"></div>
+    </header>
+    <!-------------------  End : Header -------------------->
+
+    <!-------------------  Start : Navigation  -------------------->
+    <nav>
+      <ul class="navigation" id="navigation">
+        <li class="nav_items active left">Courses</li>
+        <li class="nav_items left">Trainings</li>
+        <li class="nav_items left">Quizes</li>
+      </ul>
+      <div class="clearfix"></div>
+    </nav>
+    <!-------------------  End : Navigation  -------------------->
+
+    <!-------------------  Start : Breadcrumb  -------------------->
+    <div>
+      <ul class="breadcrumb">
+        <li class="left"><a href="#">Courses</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+        <li class="left"><a href="#">Javascript</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+        <li>Advanced JavaScript Concepts</li>
+      </ul>
+    </div>
+    <!-------------------  End : Breadcrumb  -------------------->
+
+    <!-- --------------START : SECTION---------------- -->
+    <section>
+      <div class="section-wrapper">
+
+        <div class="left video-review">
+
+          <div class="video">
+            <h1 class="video-heading">Advanced JavaScript Concepts</h1>
+            <video controls>
+              <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="review-wrapper">
+            <h1 class="review-title">Reviews (<span id="noOfReview">0</span>)</h1>
+            <div class="input-review">
+              <div class="profile">
+                <img src="https://i.pinimg.com/originals/78/2a/90/782a909dda83dc4fb1ee4855a5bdd317.png" alt="profile pic">
+              </div>
+              <div class="textbox-wrapper">
+                <div class="texbox-extension"></div>
+                <textarea name="review" rows="4" cols="80" placeholder="What's in your mind?" id="commentText"></textarea>
+              </div>
+              <button type="submit" class="right review-btn" id="review-btn" name="button">ADD REVIEW</button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+
+          <div class="comments">
+            <p class="comments-title">Look what others have got to say!</p>
+            <div class="review-list-wrapper" id="review-list-wrapper"></div>
+
+            <div class="review_pages" id="review_pages"></div>
+          </div>
+        </div>
+        <div class="video-list-wrapper right" id=video-list-wrapper>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+      </div>
+    </section>
+    <!-- --------------END : SECTION---------------- -->
+
+    <!-------------------  Start : Footer  -------------------->
+    <footer>
+      <div>
+        <div class="left location">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span id="coordinates"></span>
+        </div>
+        <div class="goTop right" id="goTop">Go Back to Top</div>
+        <div class="clearfix"></div>
+      </div>
+
+    </footer>
+    <!-------------------  End : Footer  -------------------->
+
+  </div>
+  <!-------------------  End : Wrapper  -------------------->
+  <script src="script/courses.js"></script>
+  <script src="script/reviews.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>
