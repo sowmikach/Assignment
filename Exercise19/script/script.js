@@ -91,9 +91,8 @@ $(document).ready(function() {
   }
 
   // Go Back to Top of the page
-  $("#goTop").click (function(){ {
+  $("#goTop").click (function(){ 
     $(window).scrollTop(0,0);
-      }
   });
 
 });
