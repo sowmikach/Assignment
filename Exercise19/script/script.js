@@ -1,6 +1,5 @@
 // jshint esversion:6
 var x = document.getElementById("coordinates");
-var top = document.getElementById("goTop");
 var noOfReview = document.getElementById("noOfReview");
 var review_btn = document.getElementById("review-btn");
 var course = '';
@@ -92,8 +91,9 @@ $(document).ready(function() {
   }
 
   // Go Back to Top of the page
-  top.addEventListener("click", function() {
-    $(window).scrollTop(0);
+  $("#goTop").click (function(){ {
+    $(window).scrollTop(0,0);
+      }
   });
 
 });
