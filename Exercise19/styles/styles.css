@@ -14,7 +14,7 @@
   clear: both;
 }
 
-/* Icons */
+/* -------------------- Start:Icons ---------------------- */
 .icons {
   position: fixed;
   background: #794383;
@@ -45,7 +45,8 @@
   top: 110px;
 }
 
-/* header */
+/* -------------------- End:Icons ---------------------- */
+/* ------------------ Start:Header ------------------- */
 .heading {
   width: 88%;
   margin: 15px auto;
@@ -76,7 +77,9 @@
   color: white;
 }
 
-/* navigation */
+/* ------------------ End:Header ------------------- */
+
+/* ------------------ Start:Navigation ----------------- */
 nav {
   background: #794383;
 }
@@ -87,7 +90,6 @@ nav {
 }
 
 .nav_items {
-  /* text-decoration: none; */
   color: white;
   cursor: pointer;
   padding: 10px;
@@ -97,10 +99,17 @@ nav {
   background: black;
 }
 
-/* breadcrumb */
+/* ------------------ End:Navigation ----------------- */
+
+/* ------------------ Start:Breadcrumb ------------------- */
 .breadcrumb {
   width: 88%;
   margin: 15px auto;
+}
+
+.topic-title {
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .breadcrumb li a {
@@ -112,38 +121,44 @@ nav {
   margin: 0 3px;
 }
 
-/* section */
+/* ------------------ End:Breadcrumb ------------------- */
+
+/* ------------------ Start:Section ------------------ */
 .section-wrapper {
   width: 88%;
   margin: 0 auto;
 }
-.video-review{
+
+.video-review {
   width: 68%;
 }
-.video-heading{
-  color:#794383;
+
+.video-heading {
+  color: #794383;
   font-size: 2em;
   margin-bottom: 10px;
 }
-.video video{
+
+.video video {
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* review */
-.input-review{
+/* --------------------- Review ---------------------- */
+.input-review {
   background: #E8E8E8;
   padding: 20px;
   margin-bottom: 15px;
 }
-.review-title{
-  color:#794383;
+
+.review-title {
+  color: #794383;
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.profile{
+.profile {
   position: relative;
   width: 50px;
   height: 50px;
@@ -153,105 +168,138 @@ nav {
   vertical-align: top;
   z-index: 1;
 }
-.profile img{
+
+.profile img {
   position: absolute;
   width: 40px;
   height: 45px;
-  top:2px;
-  left:6px;
+  top: 2px;
+  left: 6px;
 }
-.textbox-wrapper{
+
+.textbox-wrapper {
   display: inline-block;
   position: relative;
 }
-.texbox-extension{
+
+.texbox-extension {
   position: absolute;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
-	border-right: 8px solid white;
-	border-bottom: 5px solid transparent;
+  border-right: 8px solid white;
+  border-bottom: 5px solid transparent;
   left: 7px;
   top: 3px;
 }
-textarea{
-  border:none;
-  margin-left:15px;
+
+textarea {
+  border: none;
+  margin-left: 15px;
   width: 96%;
   padding: 15px;
   resize: none;
 }
-.review-btn{
+
+.review-btn {
   background: #794383;
-  color:white;
+  color: white;
   padding: 10px;
   margin-top: 10px;
   border: none;
 }
 
-/* review list */
-.comments-title{
+/* ----------------------- Review List ----------------- */
+.comments-title {
   color: #794383;
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 1.2em;
 }
-.review-list-item{
+
+.review-list-item {
   background: #E8E8E8;
   padding: 15px;
   border-right: 3px solid #794383;
   margin-bottom: 10px;
-  overflow: scroll;
-  height: 100px;
+  overflow-y: scroll;
+  height: 115px;
 }
-.person-profile{
+
+.person-profile {
   display: inline-block;
-  position:relative;
+  position: relative;
   margin-left: 15px;
-  width:89%;
+  width: 89%;
 }
-.review-list-item .name{
+
+.review-list-item .name {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.comment{
+
+.comment {
   margin-bottom: 10px;
 }
-.fa-thumbs-up{
-  color:#794383;
-}
-.day{
-  color:#C0C0C0;
-}
-.page-numbers-wrapper{
-  /* width: 0%; */
-  margin: 0 auto;
-  margin-top: 20px
-}
-.page-number{
-  background: #E8E8E8;
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  padding: 5px;
-  margin: 0 auto;
+
+.fa-thumbs-up {
+  color: #794383;
+  cursor: pointer;
 }
 
-/* videos list */
-.video-list-wrapper{
-  width:30%;
+.day {
+  color: #C0C0C0;
 }
-.video-list-item video{
-  width:100%;
+
+/* ------------------ Review Pages ------------------- */
+.review_pages {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#page {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: rgb(238, 238, 238);
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+
+#page:first-child {
+  background-color: #794383;
+  color: #fff;
+}
+
+#page:hover {
+  cursor: pointer;
+}
+
+#page div {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+/* ---------------------- Courses list ------------------ */
+.video-list-wrapper {
+  width: 30%;
+}
+
+.video-list-item video {
+  width: 100%;
   height: 170px;
 }
-.video-list-item h1{
+
+.video-list-item h1 {
   font-weight: bold;
   margin: 8px 0;
   margin-bottom: 15px;
 }
+/* ------------------ End:Section ------------------ */
 
-/* footer */
+/* ------------------ Start:Footer ------------------- */
 footer {
   background: #794383;
 }
@@ -264,10 +312,11 @@ footer>div {
   margin-top: 60px;
 }
 
-.goTop{
+.goTop {
   cursor: pointer;
 }
 
 .location span {
   margin-left: 5px;
 }
+/* ------------------ End:Footer ------------------- */
