@@ -1,0 +1,58 @@
+.wrapper{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.title{
+  color:rgb(31,104,155);
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 100;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+
+/* -------------------- Timer ------------------ */
+.timer{
+  text-align: center;
+  font-size: 150px;
+  font-weight: 400;
+}
+.days{
+color: rgb(105,65,131);
+}
+.hours{
+  color: rgb(243,165,54);
+}
+.minutes{
+  color: rgb(187,85,116);
+}
+.seconds{
+  color: rgb(254,223,118);
+}
+.days > span,.hours > span,.minutes  > span,.seconds > span{
+  font-size: 30px;
+  margin-right:20px;
+}
+
+/* -------------------- Accordion ------------------ */
+.accordion{
+  width: 60%;
+  margin: 0 auto;
+}
+.accordion .accordion-title{
+  background: rgb(31,104,155);
+  font-weight: bold;
+  font-size: 1.2em;
+  color:white;
+  margin-top: 10px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.content{
+  margin-bottom: 10px;
+}
+.content p{
+  border: 1px solid rgb(31,104,155);
+  line-height: 1.5;
+  padding: 10px 15px;
+}
