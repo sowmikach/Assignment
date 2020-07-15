@@ -4,7 +4,6 @@
 <head>
   <title>Exercise 19</title>
 
-
   <!-- ------------------ Google Fonts ------------------- -->
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
 
@@ -14,8 +13,6 @@
   <!-------------------  CSS Stylesheets  -------------------->
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/reset.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -59,8 +56,8 @@
     <div>
       <ul class="breadcrumb">
         <li class="left"><a href="#">Courses</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-        <li class="left"><a href="#">Javascript</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-        <li>Advanced JavaScript Concepts</li>
+        <li id="course-title"><a href="#">Javascript</a></li>
+        <li id="topic-title" class="topic-title"></li>
       </ul>
     </div>
     <!-------------------  End : Breadcrumb  -------------------->
@@ -72,7 +69,7 @@
         <div class="left video-review">
 
           <div class="video">
-            <h1 class="video-heading">Advanced JavaScript Concepts</h1>
+            <h1 class="video-heading" id="video-heading">Advanced JavaScript Concepts</h1>
             <video controls>
               <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/mp4">
             </video>
@@ -93,21 +90,20 @@
             </div>
           </div>
 
-
           <div class="comments">
             <p class="comments-title">Look what others have got to say!</p>
             <div class="review-list-wrapper" id="review-list-wrapper"></div>
-
             <div class="review_pages" id="review_pages"></div>
           </div>
+
         </div>
-        <div class="video-list-wrapper right" id=video-list-wrapper>
-        </div>
+
+        <div class="right video-list-wrapper" id="video-list-wrapper"></div>
 
         <div class="clearfix"></div>
 
-
       </div>
+
     </section>
     <!-- --------------END : SECTION---------------- -->
 
@@ -118,17 +114,15 @@
           <i class="fa fa-map-marker" aria-hidden="true"></i>
           <span id="coordinates"></span>
         </div>
-        <div class="goTop right" id="goTop">Go Back to Top</div>
+        <div class="right goTop" id="goTop">Go Back to Top</div>
         <div class="clearfix"></div>
       </div>
-
     </footer>
     <!-------------------  End : Footer  -------------------->
 
   </div>
   <!-------------------  End : Wrapper  -------------------->
-  <script src="script/courses.js"></script>
-  <script src="script/reviews.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script/script.js"></script>
 </body>
 
