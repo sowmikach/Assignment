@@ -94,7 +94,7 @@ body {
   background: rgb(255, 255, 255);
   z-index: 1;
   display: block;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .pop_description>div {
@@ -124,6 +124,7 @@ body {
   margin-top: 20px;
   font-weight: 300;
   font-size: 15px;
+  line-height: 1.3;
 }
 
 #titlewrap {
@@ -159,7 +160,7 @@ body {
 
 #thumbsupIconDiv {
   color: rgb(77, 145, 221);
-  margin-top: 7px;
+  margin-top: 15px;
 }
 
 #thumbsupIconDiv i {
