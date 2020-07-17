@@ -2,6 +2,10 @@
 const target_date = "Jul 27 2020 12:00:00";
 var interval;
 var x = 0;
+// Styling of layout
+// Working of carousel
+//Add a input for event start date and button to trigger the timer
+//Font - Roboto 
 
 $(document).ready(function() {
 

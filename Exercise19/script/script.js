@@ -3,6 +3,13 @@ var course = '';
 var comment = '';
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const REVIEWS_PER_PAGE = 3;
+//Getting an error in displayReviews
+//Styling layout
+//Font family for Breadcrumb
+//Add review does not work
+// Breadcrumbs -> Deletionn of li leaves a extra > icon
+//Hand symbol should on all clickable items - buttonn,linnks etc
+
 $(document).ready(function() {
 
   //ajax call for courses
