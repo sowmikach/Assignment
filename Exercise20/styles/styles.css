@@ -1,92 +1,149 @@
-.wrapper{
-  font-family: 'IBM Plex Sans', sans-serif;
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 80px;
 }
 
-.title{
-  color:rgb(31,104,155);
-  font-size: 2.5em;
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.title {
+  color: rgb(31, 104, 155);
+  font-size: 50px;
   text-align: center;
-  font-weight: 100;
-  margin-top:40px;
-  margin-bottom: 20px;
+  font-weight: lighter;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 /* -------------------- Carousel ------------------- */
-.carousel{
+.carousel {
   position: relative;
-  width: 60%;
-  height: 460px;
+  width: 80%;
+  height: 500px;
   overflow: hidden;
-  white-space:nowrap;
   margin: 0 auto;
+  margin-top: 80px;
   left: 0;
 }
-.slide{
+
+.slide {
   position: relative;
   display: inline-block;
   left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
-.slide img{
+
+.slide img {
   width: 100%;
-  height:100%;
+  height: 100%;
 }
-.fa-chevron-circle-left, .fa-chevron-circle-right{
+
+.fa-chevron-circle-left, .fa-chevron-circle-right {
   font-size: 3em;
   cursor: pointer;
   position: absolute;
-  top:230px;
+  top: 230px;
 }
-.fa-chevron-circle-left{
+
+.fa-chevron-circle-left {
   left: 14px;
 }
-.fa-chevron-circle-right{
-  right:14px;
+
+.fa-chevron-circle-right {
+  right: 14px;
 }
 
 /* -------------------- Timer ------------------ */
-.timer{
+.formWrapper {
   text-align: center;
-  font-size: 150px;
+  margin-top: 80px;
+  color: rgb(31, 104, 155);
+  box-sizing: border-box;
+  font-size: 1.7em;
+}
+
+.formWrapper input {
+  padding: 5px;
+}
+
+.startCountBtn {
+  background: rgb(31, 104, 155);
+  color: white;
+  padding: 7px;
+  cursor: pointer;
+  border: none;
+}
+
+.timer {
+  text-align: center;
+  font-size: 210px;
   font-weight: 400;
 }
-.days{
-color: rgb(105,65,131);
+
+.days {
+  color: rgb(105, 65, 131);
 }
-.hours{
-  color: rgb(243,165,54);
+
+.hours {
+  color: rgb(243, 165, 54);
 }
-.minutes{
-  color: rgb(187,85,116);
+
+.minutes {
+  color: rgb(187, 85, 116);
 }
-.seconds{
-  color: rgb(254,223,118);
+
+.seconds {
+  color: rgb(254, 223, 118);
 }
-.days > span,.hours > span,.minutes  > span,.seconds > span{
+
+.days>span, .hours>span, .minutes>span, .seconds>span {
   font-size: 30px;
-  margin-right:20px;
+  margin-right: 20px;
 }
 
 /* -------------------- Accordion ------------------ */
-.accordion{
-  width: 60%;
+.accordion {
+  width: 80%;
   margin: 0 auto;
 }
-.accordion .accordion-title{
-  background: rgb(31,104,155);
-  font-weight: bold;
-  font-size: 1.2em;
-  color:white;
-  margin-top: 10px;
-  padding: 10px 15px;
-  text-transform: uppercase;
+
+.fa-caret-down {
+  font-size: .8em;
 }
-.content{
+
+.content {
   margin-bottom: 10px;
 }
-.content p{
-  border: 1px solid rgb(31,104,155);
+
+.ui-icon {
+  display: none;
+}
+
+.ui-accordion .ui-accordion-header {
+  background: rgb(31, 104, 155);
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+  margin-top: 10px;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+}
+
+.ui-accordion .ui-accordion-content {
+  border: 1px solid rgb(31, 104, 155);
+  border-radius: 0px;
   line-height: 1.5;
-  padding: 10px 15px;
+  padding: 25px;
 }
