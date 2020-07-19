@@ -5,15 +5,15 @@
   <title>Exercise 20</title>
 
   <!-- ------------------ Google Fonts ------------------- -->
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- --------------------- Font Awesome --------------------- -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
   <!-------------------  CSS Stylesheets  -------------------->
+  <link href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' rel='stylesheet'>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/reset.css">
-
 </head>
 
 <body>
@@ -22,16 +22,16 @@
     <!-------------------  Start : Carousel  -------------------->
     <div class="carousel">
       <div class="slide">
-          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="slide1"/>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="slide1" />
       </div>
       <div class="slide">
-          <img src="https://wallpapercave.com/wp/wp2646303.jpg" alt="slide2"/>
+        <img src="https://www.iliketowastemytime.com/system/files/three-peaks-italy-hd-wallpaper-by-severin-hoin-iltwmt.jpg?download=1" alt="slide2" />
       </div>
       <div class="slide">
-          <img src="https://free4kwallpapers.com/uploads/originals/2020/04/02/love-missing-wallpaper.jpg" alt="slide3"/>
+        <img src="https://cdn.wallpapersafari.com/55/18/TRlkMf.jpg" alt="slide3" />
       </div>
       <div class="slide">
-          <img src="https://www.iliketowastemytime.com/system/files/three-peaks-italy-hd-wallpaper-by-severin-hoin-iltwmt.jpg?download=1" alt="slide4"/>
+        <img src="https://wonderfulengineering.com/wp-content/uploads/2016/02/wallpaper-background-2.jpg" alt="slide4" />
       </div>
       <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
       <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
@@ -39,42 +39,67 @@
     <!-------------------  End : Carousel  -------------------->
 
     <!-------------------  Start : Timer  -------------------->
+    <div class="formWrapper">
+      <label for="date">Date</label>
+      <input type="text" id="datepicker">
+      <input type="submit" class="startCountBtn" id="startTimer" value="START TIMER">
+    </div>
     <h1 class="title">Event Starts In</h1>
     <div class="timer" id="timer"></div>
     <!-------------------  End : Timer  -------------------->
 
     <!-------------------  Start : Accordion  -------------------->
-    <h1 class="title">Ports Authority Of India</h1>
+    <h1 class="title">Ports Authority of India</h1>
     <div id="accordion" class="accordion">
-      <h3 class="accordion-title">Mumbai</h3>
+      <h3>
+        <div class="left">Mumbai</div>
+        <div class="right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="clearFix"></div>
+      </h3>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora repellat eligendi neque consequuntur, voluptatibus. Ullam nulla aliquam, dicta adipisci consequatur. Vel dolorum aperiam, soluta adipisci magnam, repudiandae similique
           cum.
         </p>
       </div>
-      <h3 class="accordion-title">Mangalore</h3>
+      <h3>
+        <div class="left">Mangaluru</div>
+        <div class="right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="clearFix"></div>
+      </h3>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora repellat eligendi neque consequuntur, voluptatibus. Ullam nulla aliquam, dicta adipisci consequatur. Vel dolorum aperiam, soluta adipisci magnam, repudiandae similique
           cum.
         </p>
       </div>
-      <h3 class="accordion-title">Kochi</h3>
+      <h3>
+        <div class="left">Kochi</div>
+        <div class="right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="clearFix"></div>
+      </h3>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora repellat eligendi neque consequuntur, voluptatibus. Ullam nulla aliquam, dicta adipisci consequatur. Vel dolorum aperiam, soluta adipisci magnam, repudiandae similique
           cum.
         </p>
       </div>
-      <h3 class="accordion-title">Panaji</h3>
+      <h3>
+        <div class="left">Panaji</div>
+        <div class="right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="clearFix"></div>
+      </h3>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora repellat eligendi neque consequuntur, voluptatibus. Ullam nulla aliquam, dicta adipisci consequatur. Vel dolorum aperiam, soluta adipisci magnam, repudiandae similique
           cum.
         </p>
       </div>
-      <h3 class="accordion-title">Tuticorin</h3>
+      <h3>
+        <div class="left">Tuticorin</div>
+        <div class="right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="clearFix"></div>
+      </h3>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora repellat eligendi neque consequuntur, voluptatibus. Ullam nulla aliquam, dicta adipisci consequatur. Vel dolorum aperiam, soluta adipisci magnam, repudiandae similique
@@ -87,7 +112,7 @@
   </div>
   <!-------------------  End : Wrapper  -------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="script/script.js"></script>
 </body>
 
