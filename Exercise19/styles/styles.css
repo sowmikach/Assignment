@@ -48,8 +48,8 @@
 /* -------------------- End:Icons ---------------------- */
 /* ------------------ Start:Header ------------------- */
 .heading {
-  width: 88%;
-  margin: 15px auto;
+  width: 83%;
+  margin: 25px auto;
 }
 
 .logo img {
@@ -78,14 +78,13 @@
 }
 
 /* ------------------ End:Header ------------------- */
-
 /* ------------------ Start:Navigation ----------------- */
 nav {
   background: #794383;
 }
 
 .navigation {
-  width: 88%;
+  width: 83%;
   margin: 0 auto;
 }
 
@@ -100,11 +99,10 @@ nav {
 }
 
 /* ------------------ End:Navigation ----------------- */
-
 /* ------------------ Start:Breadcrumb ------------------- */
 .breadcrumb {
-  width: 88%;
-  margin: 15px auto;
+  width: 83%;
+  margin: 25px auto;
 }
 
 .topic-title {
@@ -122,10 +120,9 @@ nav {
 }
 
 /* ------------------ End:Breadcrumb ------------------- */
-
 /* ------------------ Start:Section ------------------ */
 .section-wrapper {
-  width: 88%;
+  width: 83%;
   margin: 0 auto;
 }
 
@@ -136,26 +133,26 @@ nav {
 .video-heading {
   color: #794383;
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .video video {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* --------------------- Review ---------------------- */
 .input-review {
   background: #E8E8E8;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .review-title {
   color: #794383;
   font-size: 1.5em;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .profile {
@@ -196,7 +193,7 @@ nav {
 textarea {
   border: none;
   margin-left: 15px;
-  width: 96%;
+  width: 94%;
   padding: 15px;
   resize: none;
 }
@@ -207,13 +204,14 @@ textarea {
   padding: 10px;
   margin-top: 10px;
   border: none;
+  cursor: pointer;
 }
 
 /* ----------------------- Review List ----------------- */
 .comments-title {
   color: #794383;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 1.2em;
 }
 
@@ -221,9 +219,9 @@ textarea {
   background: #E8E8E8;
   padding: 15px;
   border-right: 3px solid #794383;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   overflow-y: scroll;
-  height: 115px;
+  height: 130px;
 }
 
 .person-profile {
@@ -294,22 +292,22 @@ textarea {
 
 .video-list-item h1 {
   font-weight: bold;
-  margin: 8px 0;
-  margin-bottom: 15px;
+  margin: 10px 0;
+  margin-bottom: 25px;
 }
-/* ------------------ End:Section ------------------ */
 
+/* ------------------ End:Section ------------------ */
 /* ------------------ Start:Footer ------------------- */
 footer {
   background: #794383;
 }
 
 footer>div {
-  width: 88%;
+  width: 83%;
   color: white;
   margin: 0 auto;
   padding: 10px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .goTop {
@@ -319,4 +317,5 @@ footer>div {
 .location span {
   margin-left: 5px;
 }
+
 /* ------------------ End:Footer ------------------- */
