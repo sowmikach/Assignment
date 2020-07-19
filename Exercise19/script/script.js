@@ -3,13 +3,6 @@ var course = '';
 var comment = '';
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const REVIEWS_PER_PAGE = 3;
-//Getting an error in displayReviews
-//Styling layout
-//Font family for Breadcrumb
-//Add review does not work
-// Breadcrumbs -> Deletionn of li leaves a extra > icon
-//Hand symbol should on all clickable items - buttonn,linnks etc
-
 $(document).ready(function() {
 
   //ajax call for courses
@@ -46,13 +39,6 @@ $(document).ready(function() {
   $('#navigation li').on('click', function() {
     $(this).addClass('active').siblings().removeClass('active');
   });
-
-  //breadcrumb
-  let title = $("#video-heading").text();
-  if (title) {
-    $("#topic-title").append('<i class="fa fa-angle-right"><i> ' + title);
-    $("#course-title").addClass('left');
-  }
 
   //add reviews
   $("#review-btn").click(function(reviewsL) {
@@ -96,10 +82,13 @@ $(document).ready(function() {
 });
 
 /**
-* @function displayReviews
-*/
-function displayReviews(start=0) {
+ * @function displayReviews
+ */
+function displayReviews(start = 0) {
   var reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
+  if (reviewsL == undefined) {
+    localStorage.setItem("reviewsL", JSON.stringify([]));
+  }
   var page = $(".page")[start];
   if (page != undefined) {
     $(".page").css({
@@ -141,9 +130,9 @@ function displayReviews(start=0) {
 }
 
 /**
-* @function countLikes
-* @param {number} index
-*/
+ * @function countLikes
+ * @param {number} index
+ */
 function countLikes(index) {
   var reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
   var count = document.getElementsByClassName("count")[index % REVIEWS_PER_PAGE].innerHTML;
@@ -153,8 +142,8 @@ function countLikes(index) {
 }
 
 /**
-* @function displayPages
-*/
+ * @function displayPages
+ */
 function displayPages() {
   $("#review_pages").empty();
   var reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
