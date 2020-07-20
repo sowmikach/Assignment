@@ -1,11 +1,11 @@
 //jshint esversion:6
-
+//TODO: Move strings like 'Count Down' etc to a constants file within a constant folder.
 $(document).ready(function() {
 
   // --------------------- Carousel ----------------------
   var slideIndex = 1;
   var myTimer;
-
+  //TODO: Use a custom class innstead of font awesome class
   $(".fa-chevron-circle-left").click(function() {
     plusSlides(-1);
   });
@@ -18,6 +18,7 @@ $(document).ready(function() {
    * @function plusSlides
    * @param {number} n - move next or previous
    */
+  //TODO:Move slide may be a better function nname
   function plusSlides(n) {
     clearInterval(myTimer);
     if (n < 0) {
@@ -40,6 +41,7 @@ $(document).ready(function() {
    * @function showSlides
    * @param {number} n - slide number
    */
+  //TODO: Use let/const isntead of var. 
   function showSlides(n) {
     var i;
     var slides = $(".slide");
@@ -69,8 +71,10 @@ $(document).ready(function() {
   $("#startTimer").click(function() {
     $(".formWrapper").hide();
     var countDownDate = new Date($("#datepicker").val()).getTime();
+    //TODO: When the logic within setInterval/setTimeout is longer than 3 lines, move to a function and provide the reference here
     setInterval(function() {
       var now = new Date().getTime();
+      //TODO: Distance may not be a apt variable name
       var distance = countDownDate - now;
       let days = format(Math.floor(distance / (1000 * 60 * 60 * 24)));
       let hours = format(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
@@ -93,6 +97,7 @@ $(document).ready(function() {
         '<span class="seconds">' + seconds + '<span>S</span></span>');
 
       if (distance < 0) {
+        //TODO: Better naming that x
         clearInterval(x);
         $("#timer").html("EXPIRED");
       }

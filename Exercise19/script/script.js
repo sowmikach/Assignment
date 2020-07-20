@@ -2,7 +2,12 @@
 var course = '';
 var comment = '';
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const REVIEWS_PER_PAGE = 3;
+const REVIEWS_PER_PAGE = 5;
+
+
+// TODO:Create a folder - constants and a file named constants.js. Have all constant values like MONTHS,REVIEWS etc within that file and export it here
+
+
 $(document).ready(function() {
 
   //ajax call for courses
@@ -75,11 +80,18 @@ $(document).ready(function() {
   }
 
   // Go Back to Top of the page
+  //TODO:Please check the requirements. It would be menntioned to use only HTML for this feature
   $("#goTop").click(function() {
     $(window).scrollTop(0, 0);
   });
 
 });
+
+
+// TODO:Parameter and Function desription  is missing. 
+// TODO:Avoid global variables as much as possible. 
+//TODO: UI of reviews does not match UX
+//TODO: UI of nav bar does not match UX
 
 /**
  * @function displayReviews
@@ -152,4 +164,5 @@ function displayPages() {
     $("#review_pages").append(page);
   }
 }
+//Invoke function within document ready as much as possible.
 displayPages();
