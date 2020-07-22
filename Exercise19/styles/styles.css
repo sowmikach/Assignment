@@ -53,14 +53,19 @@
 }
 
 .logo img {
-  width: 60%;
+  width: 54%;
 }
 
 .search-text {
-  padding: 6px;
+  padding: 8px 50px 8px 15px;
   font-size: 17px;
   border: none;
-  background: #E8E8E8;
+  background: #F0F0F0;
+}
+
+.search-text::placeholder{
+  color: #D8D8D8;
+  font-weight: lighter;
 }
 
 .search-container {
@@ -69,9 +74,10 @@
 
 .search-container button {
   float: right;
-  padding: 6px 10px;
+  padding: 8px 10px;
   background: #794383;
   font-size: 17px;
+  font-weight: lighter;
   border: none;
   cursor: pointer;
   color: white;
@@ -91,28 +97,33 @@ nav {
 .nav_items {
   color: white;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
 .active {
   background: black;
+  font-weight: bold;
 }
 
 /* ------------------ End:Navigation ----------------- */
 /* ------------------ Start:Breadcrumb ------------------- */
 .breadcrumb {
   width: 83%;
-  margin: 25px auto;
+  margin: 27px auto;
 }
 
 .topic-title {
   cursor: pointer;
-  font-family: 'IBM Plex Sans', sans-serif;
 }
-
+.breadcrumb li{
+  font-size: 16.5px;
+}
 .breadcrumb li a {
   text-decoration: none;
   color: rgb(101, 169, 226);
+  font-size: 16.5px;
 }
 
 .fa-angle-right {
@@ -127,7 +138,7 @@ nav {
 }
 
 .video-review {
-  width: 68%;
+  width: 70%;
 }
 
 .video-heading {
@@ -143,7 +154,7 @@ nav {
 
 /* --------------------- Review ---------------------- */
 .input-review {
-  background: #E8E8E8;
+  background:#F0F0F0;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -191,11 +202,15 @@ nav {
 }
 
 textarea {
+  font-family: 'IBM Plex Sans', sans-serif;
   border: none;
   margin-left: 15px;
-  width: 94%;
+  width: 100%;
   padding: 15px;
   resize: none;
+}
+textarea::placeholder{
+  color:#F0F0F0;
 }
 
 .review-btn {
@@ -216,12 +231,12 @@ textarea {
 }
 
 .review-list-item {
-  background: #E8E8E8;
+  background: #F0F0F0;
   padding: 15px;
   border-right: 3px solid #794383;
   margin-bottom: 15px;
-  overflow-y: scroll;
-  height: 130px;
+  /* overflow-y: scroll; */
+  /* height: 130px; */
 }
 
 .person-profile {
@@ -282,12 +297,12 @@ textarea {
 
 /* ---------------------- Courses list ------------------ */
 .video-list-wrapper {
-  width: 30%;
+  width: 28%;
 }
 
 .video-list-item video {
   width: 100%;
-  height: 170px;
+  height: 175px;
 }
 
 .video-list-item h1 {
@@ -306,12 +321,14 @@ footer>div {
   width: 83%;
   color: white;
   margin: 0 auto;
-  padding: 10px;
+  padding: 12px;
   margin-top: 50px;
 }
 
-.goTop {
-  cursor: pointer;
+.goTop{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 }
 
 .location span {

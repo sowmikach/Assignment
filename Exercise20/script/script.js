@@ -1,25 +1,20 @@
 //jshint esversion:6
-//TODO: Move strings like 'Count Down' etc to a constants file within a constant folder.
 $(document).ready(function() {
-
   // --------------------- Carousel ----------------------
-  var slideIndex = 1;
-  var myTimer;
-  //TODO: Use a custom class innstead of font awesome class
-  $(".fa-chevron-circle-left").click(function() {
-    plusSlides(-1);
+  let slideIndex = 1;
+  let myTimer;
+  $(".previous_btn").click(function() {
+    moveSlides(-1);
   });
-
-  $(".fa-chevron-circle-right").click(function() {
-    plusSlides(1);
+  $(".next_btn").click(function() {
+    moveSlides(1);
   });
-
   /**
    * @function plusSlides
    * @param {number} n - move next or previous
+   * DESCRIPTION - moves from one slide to another slide
    */
-  //TODO:Move slide may be a better function nname
-  function plusSlides(n) {
+  function moveSlides(n) {
     clearInterval(myTimer);
     if (n < 0) {
       showSlides(slideIndex -= 1);
@@ -28,11 +23,11 @@ $(document).ready(function() {
     }
     if (n === -1) {
       myTimer = setInterval(function() {
-        plusSlides(n + 2);
+        moveSlides(n + 2);
       }, 3000);
     } else {
       myTimer = setInterval(function() {
-        plusSlides(n);
+        moveSlides(n);
       }, 3000);
     }
   }
@@ -40,70 +35,71 @@ $(document).ready(function() {
   /**
    * @function showSlides
    * @param {number} n - slide number
+   * DESCRIPTION - displays slides
    */
-  //TODO: Use let/const isntead of var. 
   function showSlides(n) {
-    var i;
-    var slides = $(".slide");
+    let slides = $(".slide");
     if (n > slides.length) {
       slideIndex = 1;
     }
     if (n < 1) {
       slideIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
   }
   showSlides(slideIndex);
   myTimer = setInterval(function() {
-    plusSlides(1);
+    moveSlides(1);
   }, 3000);
 
   // ------------------- Count Down Timer ----------------
   $("#timer").html("Count Down");
-
   $("#datepicker").datepicker({
     minDate: 1
   });
-
   $("#startTimer").click(function() {
     $(".formWrapper").hide();
-    var countDownDate = new Date($("#datepicker").val()).getTime();
-    //TODO: When the logic within setInterval/setTimeout is longer than 3 lines, move to a function and provide the reference here
     setInterval(function() {
-      var now = new Date().getTime();
-      //TODO: Distance may not be a apt variable name
-      var distance = countDownDate - now;
-      let days = format(Math.floor(distance / (1000 * 60 * 60 * 24)));
-      let hours = format(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      let minutes = format(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-      let seconds = format(Math.floor((distance % (1000 * 60)) / 1000));
-
-      /**
-       * @function format
-       * @param {number} singleDigit
-       */
-      function format(singleDigit) {
-        if (singleDigit < 10)
-          singleDigit = "0" + singleDigit;
-        return singleDigit;
-      }
-
-      $("#timer").html('<span class="days">' + days + '<span>D</span></span>' +
-        '<span class="hours">' + hours + '<span>H</span></span>' +
-        '<span class="minutes">' + minutes + '<span>M</span></span>' +
-        '<span class="seconds">' + seconds + '<span>S</span></span>');
-
-      if (distance < 0) {
-        //TODO: Better naming that x
-        clearInterval(x);
-        $("#timer").html("EXPIRED");
-      }
+      countDown();
     }, 1000);
   });
 
-// --------------------- Accordion --------------------
+  // --------------------- Accordion --------------------
   $("#accordion").accordion();
 });
+
+/**
+ * @function countDown
+ * DESCRIPTION - displays count down timer
+ */
+function countDown() {
+  let countDownDate = new Date($("#datepicker").val()).getTime();
+  let now = new Date().getTime();
+  let countDownTime = countDownDate - now;
+  let days = format(Math.floor(countDownTime / (1000 * 60 * 60 * 24)));
+  let hours = format(Math.floor((countDownTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  let minutes = format(Math.floor((countDownTime % (1000 * 60 * 60)) / (1000 * 60)));
+  let seconds = format(Math.floor((countDownTime % (1000 * 60)) / 1000));
+
+  /**
+   * @function format
+   * @param {number} singleDigit
+   * DESCRIPTION - converts single digit number to double digit
+   */
+  function format(singleDigit) {
+    if (singleDigit < 10)
+      singleDigit = "0" + singleDigit;
+    return singleDigit;
+  }
+  $("#timer").html('<span class="days">' + days + '<span>D</span></span>' +
+    '<span class="hours">' + hours + '<span>H</span></span>' +
+    '<span class="minutes">' + minutes + '<span>M</span></span>' +
+    '<span class="seconds">' + seconds + '<span>S</span></span>');
+  if (countDownTime < 0) {
+    clearInterval(myTimer);
+    $("#timer").html("EXPIRED");
+  }
+}

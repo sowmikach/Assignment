@@ -16,9 +16,10 @@
 </head>
 
 <body>
+
   <!-------------------  Start : Wrapper  -------------------->
   <div class="wrapper">
-
+    <a id="top"></a>
     <!-------------------  Start : Icons  -------------------->
     <div class="icons">
       <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -82,7 +83,7 @@
               </div>
               <div class="textbox-wrapper">
                 <div class="texbox-extension"></div>
-                <textarea name="review" rows="4" cols="75" placeholder="What's in your mind?" id="commentText"></textarea>
+                <textarea name="review" rows="4" cols="83" placeholder="What's in your mind?" id="commentText"></textarea>
               </div>
               <button type="submit" class="right review-btn" id="review-btn" name="button">ADD REVIEW</button>
               <div class="clearfix"></div>
@@ -113,7 +114,9 @@
           <i class="fa fa-map-marker" aria-hidden="true"></i>
           <span id="coordinates"></span>
         </div>
-        <div class="right goTop" id="goTop">Go Back to Top</div>
+        <div class="right">
+          <a href="#top" class="goTop">Go Back to Top</a>
+        </div>
         <div class="clearfix"></div>
       </div>
     </footer>
@@ -122,6 +125,7 @@
   </div>
   <!-------------------  End : Wrapper  -------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script/constants.js"></script>
   <script src="script/script.js"></script>
 </body>
 
