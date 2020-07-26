@@ -57,8 +57,9 @@
 }
 
 .search-text {
-  padding: 8px 50px 8px 15px;
-  font-size: 17px;
+  padding: 10px;
+  width: 50%;
+  font-size: 14px;
   border: none;
   background: #F0F0F0;
 }
@@ -70,6 +71,8 @@
 
 .search-container {
   float: right;
+  text-align: right;
+  width: 50%;
 }
 
 .search-container button {
@@ -220,6 +223,7 @@ textarea::placeholder{
   margin-top: 10px;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* ----------------------- Review List ----------------- */
@@ -253,15 +257,25 @@ textarea::placeholder{
 
 .comment {
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .fa-thumbs-up {
   color: #794383;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.count{
+  font-weight: 500;
+  color: #794383;
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .day {
   color: #C0C0C0;
+  font-size: 14px;
 }
 
 /* ------------------ Review Pages ------------------- */
@@ -302,7 +316,7 @@ textarea::placeholder{
 
 .video-list-item video {
   width: 100%;
-  height: 175px;
+  height: 160px;
 }
 
 .video-list-item h1 {

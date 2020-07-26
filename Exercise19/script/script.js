@@ -22,10 +22,10 @@ $(document).ready(function() {
   $.ajax({
     METHOD: 'GET',
     url: API_URL.REVIEWS,
-    success: function(reviewsL) {
-      let reviews = JSON.parse(localStorage.getItem("reviewsL"));
-      if (reviews == null) {
-        localStorage.setItem("reviewsL", JSON.stringify(reviewsL));
+    success: function(reviews) {
+      let review = JSON.parse(localStorage.getItem("reviews"));
+      if (review == null) {
+        localStorage.setItem("reviews", JSON.stringify(reviews));
       }
       displayReviews();
       displayPages();
@@ -39,20 +39,20 @@ $(document).ready(function() {
     $(this).addClass('active').siblings().removeClass('active');
   });
   //add reviews
-  $("#review-btn").click(function(reviewsL) {
-    let d = new Date();
-    commentText = document.getElementById("commentText").value;
+  $("#review-btn").click(function(reviews) {
+    let newDate = new Date();
+    let commentText = document.getElementById("commentText").value;
     if (commentText != "") {
       var reviewObj = {
         comment: commentText,
         user: "Sowmika",
         likes: 0,
         profileImg: "https://i.pinimg.com/originals/78/2a/90/782a909dda83dc4fb1ee4855a5bdd317.png",
-        timeStamp: d.toISOString()
+        timeStamp: newDate.toISOString()
       };
-      reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
-      reviewsL.unshift(reviewObj);
-      localStorage.setItem("reviewsL", JSON.stringify(reviewsL));
+      reviews = JSON.parse(localStorage.getItem("reviews"));
+      reviews.unshift(reviewObj);
+      localStorage.setItem("reviews", JSON.stringify(reviews));
     }
     document.getElementById("commentText").value = "";
     displayReviews();
@@ -77,16 +77,17 @@ $(document).ready(function() {
  */
 function displayReviews(start = 0) {
   let comment = '';
-  var reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
-  if (reviewsL == undefined) {
-    localStorage.setItem("reviewsL", JSON.stringify([]));
+  let len;
+  let reviews = JSON.parse(localStorage.getItem("reviews"));
+  if (reviews == undefined) {
+    localStorage.setItem("reviews", JSON.stringify([]));
   }
   let page = $(".page")[start];
   if (page != undefined) {
     $(".page").css({
       "background-color": "#794383",
       "color": "#fff"});
-    for (i = 0; i < reviewsL.length / REVIEWS_PER_PAGE; i++) {
+    for (let i = 0; i < reviews.length / REVIEWS_PER_PAGE; i++) {
       if (i != start) {
         $(".page").eq(i).css({
           "background-color": "rgb(238,238,238)",
@@ -95,27 +96,26 @@ function displayReviews(start = 0) {
     }
   }
   $("#review-list-wrapper").empty();
-  if (((start * REVIEWS_PER_PAGE) + REVIEWS_PER_PAGE) < reviewsL.length)
+  if (((start * REVIEWS_PER_PAGE) + REVIEWS_PER_PAGE) < reviews.length)
     len = ((start * REVIEWS_PER_PAGE) + REVIEWS_PER_PAGE);
   else
-    len = reviewsL.length;
-  comment = '';
+    len = reviews.length;
   for (let i = (start * REVIEWS_PER_PAGE); i < len; i++) {
     comment += '<div class="review-list-item" id="review-list-item">' +
-      '<div class="profile left"><img src=' + reviewsL[i].profileImg + ' alt="profile pic"></div>' +
+      '<div class="profile left"><img src=' + reviews[i].profileImg + ' alt="profile pic"></div>' +
       '<div class="person-profile left">' +
-      '<h1 class="name">' + reviewsL[i].user + '</h1>' +
-      '<p class="comment">' + reviewsL[i].comment + '</p>' +
+      '<h1 class="name">' + reviews[i].user + '</h1>' +
+      '<p class="comment">' + reviews[i].comment + '</p>' +
       '<div class="thumbsup"><i class="fa fa-thumbs-up" onclick="countLikes(' + i + ')"></i>' +
-      '<span class="count">' + reviewsL[i].likes + '</span>' +
-      '<p class="right day">' + MONTHS[reviewsL[i].timeStamp.slice(5, 7) - 1] + ' ' + reviewsL[i].timeStamp.slice(8, 10) + '</p>' +
+      '<span class="count">' + reviews[i].likes + '</span>' +
+      '<p class="right day">' + MONTHS[reviews[i].timeStamp.slice(5, 7) - 1] + ' ' + reviews[i].timeStamp.slice(8, 10) + '</p>' +
       '</div>' +
       '</div>' +
       '<div class="clearfix"></div>' +
       '</div>';
   }
   $("#review-list-wrapper").append(comment);
-  $("#noOfReview").text(reviewsL.length);
+  $("#noOfReview").text(reviews.length);
 }
 
 /**
@@ -124,7 +124,7 @@ function displayReviews(start = 0) {
  */
 function displayPages() {
   $("#review_pages").empty();
-  let reviews = JSON.parse(localStorage.getItem("reviewsL"));
+  let reviews = JSON.parse(localStorage.getItem("reviews"));
   console.log(reviews);
   for (let i = 0; i < (reviews.length / REVIEWS_PER_PAGE); i++) {
     var page = '<button id="page" class="page" onclick="displayReviews(' + i + ')"><div>' + (i + 1) + '</div></button>';
@@ -138,9 +138,9 @@ function displayPages() {
  * DESCRIPTION : increment likes on click
  */
 function countLikes(index) {
-  let reviewsL = JSON.parse(localStorage.getItem("reviewsL"));
+  let reviews = JSON.parse(localStorage.getItem("reviews"));
   let count = document.getElementsByClassName("count")[index % REVIEWS_PER_PAGE].innerHTML;
-  reviewsL[index].likes = parseInt(count) + 1;
+  reviews[index].likes = parseInt(count) + 1;
   document.getElementsByClassName("count")[index % REVIEWS_PER_PAGE].innerHTML = parseInt(count) + 1;
-  localStorage.setItem("reviewsL", JSON.stringify(reviewsL));
+  localStorage.setItem("reviews", JSON.stringify(reviews));
 }
