@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 22</title>
+
+  <!-- ------------------ Google Fonts --------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- --------------------- Font Awesome ----------------------->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  <!------------------- CSS Stylesheets -------------------->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <!------------------- Start : Wrapper -------------------->
+  <div class="wrapper">
+    <!------------------- Start : Header -------------------->
+    <header>
+      <div class="headerContainer">
+        <h1 class="left heading">Pocket Notes</h1>
+        <div class="right view">
+          <label for="view">Default View</label>
+          <select name="view" id="view" class="dropdown">
+            <option value="5-column">5 Column Format</option>
+            <option value="2-column">2 Column Format</option>
+          </select>
+        </div>
+      <div class="clearFix"></div>
+    </div>
+    </header>
+    <!------------------- End : Header -------------------->
+    <!------------------- Start : Section -------------------->
+    <section>
+      <div class="notesWrapper">
+        <div class="addNoteWrapper noteItem left">
+          <div class="addNotesIcon">
+            <i class="fa fa-plus-circle" id="addNotesIcon"></i>
+          </div>
+        </div>
+        <div class="clearFix"></div>
+      </div>
+    </section>
+    <!------------------- End : Section -------------------->
+  </div>
+  <!------------------- End : Wrapper -------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script/constants.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
