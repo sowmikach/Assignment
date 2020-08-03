@@ -8,12 +8,12 @@ $(document).ready(function() {
   displayLayout();
   $("#addNotesIcon").click(function() {
     let addNoteModal = $("<div class='addNoteModal'></div>");
-    let popDiv = '<div class="noteModal">' +
+    let popDiv = '<div id="noteModal" class="noteModal">' +
       '<h1 class="noteModalTitle">New Note</h1>' +
-      '<input type="text" class="noteTitle" placeholder="Note Title">' +
-      '<textarea rows="8" cols="80" class="noteContent" id="noteContent" placeholder="Say Something"></textarea>' +
+      '<input type="text" name="note_title" class="noteTitle" id="noteTitle" placeholder="Note Title" required/>' +
+      '<textarea rows="8" cols="80" name="note_content" class="noteContent" id="noteContent" required placeholder="Say Something"></textarea>' +
       '<div class="noteBgColor"><span>Notes Background</span><div class="colors"><div class="green"><i class="fa fa-check" aria-hidden="true"></i></div><div class="blue"></div><div class="grey"></div><div class="pink"></div></div></div>' +
-      '<div class="modalBtns"><input type="submit" name="cancel" value="Cancel" id="cancelBtn" class="noteModalBtn cancelBtn"><input type="submit" name="add" value="Add" id="addBtn" class="noteModalBtn addBtn"></div>';
+      '<div class="modalBtns"><input type="submit" name="cancel" value="Cancel" id="cancelBtn" class="noteModalBtn cancelBtn"><input type="submit" name="add" value="Add" id="addBtn" class="noteModalBtn addBtn"></div></div>';
     addNoteModal.append(popDiv);
     addNoteModal.appendTo(document.body);
     $(".green").click(function() {
@@ -46,6 +46,14 @@ $(document).ready(function() {
       let noteTitle = $(".noteTitle").val();
       let noteContent = $("#noteContent").val();
       let newDate = new Date();
+      if (noteTitle === '') {
+        alert('Note title is required');
+        return false;
+      }
+      if (noteContent === '') {
+        alert('Please enter some data');
+        return false;
+      }
       if (noteTitle != "" && noteContent != "") {
         let noteObj = {
           title: noteTitle,
@@ -59,6 +67,7 @@ $(document).ready(function() {
         noteTitleBg = "rgb(165, 209, 120)";
         noteContentBg = "rgb(184, 233, 134)";
       }
+
       $(".addNoteModal").remove();
       displayLayout();
     });
@@ -75,8 +84,9 @@ $(document).ready(function() {
 
   });
 
-  $('#view').click(function() {
-    displayLayout();
+  $('.dropdown').click(function() {
+    let format = $('#view option:selected').text();
+    layoutFormat(format);
   });
 
 });
@@ -98,13 +108,13 @@ function layoutFormat(format) {
     // $(".noteItem:nth-child(5n)").css("margin-right", "20px");
     $(".noteHeader div").css("width", "95%");
     $(".addNotesIcon").css({
-      "top": "60px",
-      "left": "275px"
+      "top": "28%",
+      "left": "45%"
     });
     $(".notesContent").css("height", "59%");
   } else if (format == '5 Column Format') {
     $(".noteItem").css({
-      "height": "300px",
+      "height": "330px",
       "width": "calc((100% - 100px)/5)"
     });
     // $(".notesWrapper>div").addClass(".noteItem:nth-child(5n)");
@@ -113,8 +123,8 @@ function layoutFormat(format) {
     // $(".noteItem:nth-child(2n)").css("margin-right", "20px");
     $(".noteHeader div").css("width", "87%");
     $(".addNotesIcon").css({
-      "top": "115px",
-      "left": "87px"
+      "top": "35%",
+      "left": "40%"
     });
     $(".notesContent").css("height", "74%");
   }
@@ -130,18 +140,12 @@ function displayLayout() {
   $(".noteWrapper").remove();
   for (let i = 0; i < notes.length; i++) {
     let note = '';
-    if ((format == "5 Column Format") && (notes[i].title.length > 21)) {
-      notes[i].title = notes[i].title.slice(0, 20) + "...";
-    }
-    if ((format == "2 Column Format") && (notes[i].title.length > 65)) {
-      notes[i].title = notes[i].title.slice(0, 64) + "...";
-    }
-    if ((format == "5 Column Format") && (notes[i].content.length > 354)) {
-      notes[i].content = notes[i].content.slice(0, 353) + "...";
-    }
-    if ((format == "2 Column Format") && (notes[i].content.length > 560)) {
-      notes[i].content = notes[i].content.slice(0, 559) + "...";
-    }
+    // if ((format == "5 Column Format") && (notes[i].content.length > 354)) {
+    //   notes[i].content = notes[i].content.slice(0, 353) + "...";
+    // }
+    // else if ((format == "2 Column Format") && (notes[i].content.length > 600)) {
+    //   notes[i].content = notes[i].content.slice(0, 599) + "...";
+    // }
     note += '<div class="noteWrapper noteItem left" style="background-color:' + notes[i].contentBg + '">' +
       '<h1 class="noteHeader" style="background-color:' + notes[i].titleBg + '"><div>' + notes[i].title + '</div></h1>' +
       '<p class="notesContent">' + notes[i].content + '</p>' +

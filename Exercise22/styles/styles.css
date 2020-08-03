@@ -49,16 +49,17 @@ header {
   margin-right: 10px;
 }
 
-select {
+.dropdown {
   padding: 10px 12px;
   width: 50%;
   font-size: 14px;
   border: none;
   appearance: none;
   background: url("https://cdn1.iconfinder.com/data/icons/outline-17/16/caret-down-512.png") 94% / 8% no-repeat #eee;
+  cursor: pointer;
 }
-/* ---------------------- End : Header ----------------- */
 
+/* ---------------------- End : Header ----------------- */
 /* ---------------------- Start : Section ----------------- */
 .notesWrapper {
   width: 95%;
@@ -68,7 +69,7 @@ select {
 }
 
 .notesWrapper .noteItem {
-  height: 300px;
+  height: 330px;
   width: calc((100% - 82px)/5);
   position: relative;
   margin-right: 20px;
@@ -77,8 +78,8 @@ select {
 
 /* .notesWrapper .noteItem:nth-child(5n) {
   margin-right: 0;
-}
-
+} */
+/*
 .notesWrapper .noteItem:nth-child(2n){
   margin-right: 0;
 } */
@@ -89,8 +90,8 @@ select {
 .addNotesIcon {
   position: absolute;
   color: #9f1110;
-  left: 85px;
-  top: 115px;
+  left: 40%;
+  top: 35%;
   font-size: 80px;
 }
 
@@ -116,9 +117,10 @@ select {
   width: 87%;
   top: 12px;
   left: 15px;
-  height: 50%;
+  height: 45%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .notesContent {
@@ -126,7 +128,7 @@ select {
   padding: 15px;
   height: 74%;
   text-align: justify;
-  overflow-wrap: break-word;
+  word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.4;
@@ -165,9 +167,9 @@ select {
 
 .noteModal {
   position: fixed;
-  top: 100px;
-  left: 400px;
-  width: 500px;
+  top: 25%;
+  left: 33%;
+  width: 37%;
   font-family: 'Open Sans', sans-serif;
   padding: 25px;
   background: #fff;
@@ -180,6 +182,7 @@ select {
 }
 
 .noteTitle {
+  font-family: 'Open Sans', sans-serif;
   margin: 15px 0;
   width: 100%;
   padding: 10px 15px;
@@ -191,6 +194,7 @@ select {
 }
 
 .noteContent {
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 15px;
   width: 100%;
   padding: 10px 15px;
@@ -267,9 +271,9 @@ select {
 
 .deleteNote {
   position: fixed;
-  top: 210px;
-  left: 450px;
-  width: 450px;
+  top: 38%;
+  left: 35%;
+  width: 34%;
   font-family: 'Open Sans', sans-serif;
   padding: 25px;
   background: #fff;
