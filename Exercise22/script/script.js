@@ -5,13 +5,15 @@ $(document).ready(function() {
   if (notes == null) {
     localStorage.setItem("noteList", JSON.stringify([]));
   }
+  let format = $('#view').val();
+  localStorage.setItem("Layout", format);
   displayLayout();
   $("#addNotesIcon").click(function() {
     let addNoteModal = $("<div class='addNoteModal'></div>");
     let popDiv = '<form id="noteModal" class="noteModal">' +
       '<h1 class="noteModalTitle">New Note</h1>' +
-      '<input type="text" name="noteTitle" class="noteTitle" id="noteTitle" placeholder="Note Title" required/>' +
-      '<textarea rows="8" cols="80" name="noteContent" class="noteContent" id="noteContent" required placeholder="Say Something"></textarea>' +
+      '<input type="text" name="note_title" class="noteTitle" id="noteTitle" placeholder="Note Title" autocomplete="off" required />' +
+      '<textarea rows="8" cols="80" name="note_content" class="noteContent" id="noteContent" placeholder="Say Something" required></textarea>' +
       '<div class="noteBgColor"><span>Notes Background</span><div class="colors"><div class="green"><i class="fa fa-check" aria-hidden="true"></i></div><div class="blue"></div><div class="grey"></div><div class="pink"></div></div></div>' +
       '<div class="modalBtns"><button type="button" id="cancelBtn" class="noteModalBtn cancelBtn">Cancel</button><input type="submit" name="add" value="Add" id="addBtn" class="noteModalBtn addBtn"></div></form>';
     addNoteModal.append(popDiv);
@@ -40,51 +42,36 @@ $(document).ready(function() {
       noteTitleBg = "rgb(206, 191, 193)";
       noteContentBg = "rgb(220, 205, 207)";
     });
-//     jQuery.validator.setDefaults({
-//   debug: true,
-//   success: "valid"
-// });
-// $( "#noteModal" ).validate({
-//   rules: {
-//     noteTitle: {
-//       required: true,
-//     },
-//     noteContent: {
-//       required: true,
-//     }
-//   }
-// });
+
+
     $(".addBtn").click(function() {
-      // debugger;
-      let notes = JSON.parse(localStorage.getItem("noteList"));
-      let noteTitle = $(".noteTitle").val();
-      let noteContent = $("#noteContent").val();
-      let newDate = new Date();
-      // $(".error").remove();
-      //
-      // if (noteTitle==undefined) {
-      //   $('.noteTitle').before('<div class="error">This field is required</div>');
-      //   return false;
-      // }
-      // if (noteContent==undefined) {
-      //   $('#noteContent').before('<div class="error">This field is required</div>');
-      // }
-      if (noteTitle != "" && noteContent != "") {
-        let noteObj = {
-          title: noteTitle,
-          content: noteContent,
-          titleBg: noteTitleBg,
-          contentBg: noteContentBg,
-          timestamp: newDate.getDate() + " " + MONTHS[newDate.getMonth()]
-        };
-        notes.unshift(noteObj);
-        localStorage.setItem("noteList", JSON.stringify(notes));
-        noteTitleBg = "rgb(165, 209, 120)";
-        noteContentBg = "rgb(184, 233, 134)";
+      if ($("#noteModal").validate()) {
+        let notes = JSON.parse(localStorage.getItem("noteList"));
+        let noteTitle = $(".noteTitle").val();
+        let noteContent = $("#noteContent").val();
+        let newDate = new Date();
+        if (noteTitle != "" && noteContent != "") {
+          let noteObj = {
+            title: noteTitle,
+            content: noteContent,
+            titleBg: noteTitleBg,
+            contentBg: noteContentBg,
+            timestamp: newDate.getDate() + " " + MONTHS[newDate.getMonth()]
+          };
+          notes.unshift(noteObj);
+          localStorage.setItem("noteList", JSON.stringify(notes));
+          noteTitleBg = "rgb(165, 209, 120)";
+          noteContentBg = "rgb(184, 233, 134)";
+        }
+
+        $(".addNoteModal").remove();
+        displayLayout();
+        return true;
+      } else {
+        return false;
       }
 
-      $(".addNoteModal").remove();
-      displayLayout();
+
     });
 
     $("#cancelBtn").click(function() {
@@ -99,16 +86,17 @@ $(document).ready(function() {
 
   });
 
-  $('#view').change(function(){
-          let format = $(this).val();
-          localStorage.setItem("Layout", format);
-          displayLayout();
+
+  $('#view').change(function() {
+    let format = $(this).val();
+    localStorage.setItem("Layout", format);
+    displayLayout();
   });
 });
 
 $(window).on('load', function() {
-  var layout = localStorage.getItem("Layout");
-    $('#view').val(layout);
+  let layout = localStorage.getItem("Layout");
+  $('#view').val(layout);
 });
 
 /**
@@ -132,7 +120,7 @@ function layoutFormat(format) {
   } else if (format == '5 Column Format') {
     $(".addNotesIcon").css({
       "top": "35%",
-      "left": "40%"
+      "left": "39%"
     });
     $(".noteItem").css({
       "height": "330px",

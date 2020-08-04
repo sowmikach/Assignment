@@ -150,10 +150,6 @@ header {
   height: 100%;
   background: rgb(1, 1, 1, 0.3);
 }
-.error {
-  color: red;
-  /* margin-left: 5px; */
-}
 
 .noteModal {
   position: fixed;
@@ -169,12 +165,16 @@ header {
 .noteModalTitle {
   font-weight: bold;
   text-align: center;
-  margin-bottom: 15px ;
+  /* margin-bottom: 15px ; */
+}
+
+.error {
+  color: red;
 }
 
 .noteTitle {
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 15px ;
+  margin-top: 15px;
   width: 100%;
   padding: 10px 15px;
   font-size: 14px;
@@ -186,7 +186,7 @@ header {
 
 .noteContent {
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 15px;
+  margin-top: 15px;
   width: 100%;
   padding: 10px 15px;
   resize: none;
@@ -219,6 +219,7 @@ header {
 
 .noteBgColor {
   font-size: 12px;
+  margin-top: 15px;
   margin-bottom: 20px;
   font-weight: 500;
 }
