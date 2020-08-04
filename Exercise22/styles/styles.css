@@ -69,20 +69,11 @@ header {
 }
 
 .notesWrapper .noteItem {
-  height: 330px;
-  width: calc((100% - 82px)/5);
   position: relative;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-/* .notesWrapper .noteItem:nth-child(5n) {
-  margin-right: 0;
-} */
-/*
-.notesWrapper .noteItem:nth-child(2n){
-  margin-right: 0;
-} */
 .addNoteWrapper {
   border: 1px dashed #da9393;
 }
@@ -90,8 +81,6 @@ header {
 .addNotesIcon {
   position: absolute;
   color: #9f1110;
-  left: 40%;
-  top: 35%;
   font-size: 80px;
 }
 
@@ -114,7 +103,6 @@ header {
 
 .noteHeader div {
   position: absolute;
-  width: 87%;
   top: 12px;
   left: 15px;
   height: 45%;
@@ -126,11 +114,9 @@ header {
 .notesContent {
   font-size: 12px;
   padding: 15px;
-  height: 74%;
   text-align: justify;
   word-wrap: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: auto;
   line-height: 1.4;
 }
 
@@ -164,6 +150,10 @@ header {
   height: 100%;
   background: rgb(1, 1, 1, 0.3);
 }
+.error {
+  color: red;
+  /* margin-left: 5px; */
+}
 
 .noteModal {
   position: fixed;
@@ -179,11 +169,12 @@ header {
 .noteModalTitle {
   font-weight: bold;
   text-align: center;
+  margin-bottom: 15px ;
 }
 
 .noteTitle {
   font-family: 'Open Sans', sans-serif;
-  margin: 15px 0;
+  margin-bottom: 15px ;
   width: 100%;
   padding: 10px 15px;
   font-size: 14px;
