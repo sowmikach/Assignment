@@ -6,7 +6,10 @@ $(document).ready(function() {
     localStorage.setItem("noteList", JSON.stringify([]));
   }
   let format = $('#view').val();
-  localStorage.setItem("Layout", format);
+  if(format==null){
+    sessionStorage.setItem("Layout", "5 Column Format");
+    $('#view').val("5 Column Format");
+  }
   displayLayout();
   $("#addNotesIcon").click(function() {
     let addNoteModal = $("<div class='addNoteModal'></div>");
@@ -42,29 +45,8 @@ $(document).ready(function() {
       noteTitleBg = "rgb(206, 191, 193)";
       noteContentBg = "rgb(220, 205, 207)";
     });
-    var $addNoteForm = $('#noteModal');
-    if ($addNoteForm.length) {
-      $addNoteForm.validate({
-        rules: {
-          note_title: {
-            required: true
-          },
-          note_content: {
-            required: true
-          }
-        },
-        messages: {
-          note_title: {
-            required: 'Please enter some title'
-          },
-          note_content: {
-            required: 'Please enter some content'
-          }
-        }
-      });
-    }
+
     $(".addBtn").click(function() {
-      debugger;
       let noteTitle = $(".noteTitle").val();
       let noteContent = $("#noteContent").val();
       let notes = JSON.parse(localStorage.getItem("noteList"));
@@ -82,7 +64,6 @@ $(document).ready(function() {
         noteTitleBg = "rgb(165, 209, 120)";
         noteContentBg = "rgb(184, 233, 134)";
       }
-      // $(".addNoteModal").remove();
       displayLayout();
     });
 
@@ -97,17 +78,16 @@ $(document).ready(function() {
     });
   });
 
-
   $('#view').change(function() {
     let format = $(this).val();
-    localStorage.setItem("Layout", format);
+    sessionStorage.setItem("Layout", format);
+    console.log("onView"+format);
     displayLayout();
   });
 });
 
 $(window).on('load', function() {
-  let layout = localStorage.getItem("Layout");
-  $('#view').val(layout);
+  $('#view').val(sessionStorage.getItem("Layout"));
 });
 
 /**
@@ -116,7 +96,6 @@ $(window).on('load', function() {
  * DESCRIPTION - configures the layout in specified format
  */
 function layoutFormat(format) {
-  debugger;
   if (format == '2 Column Format') {
     $(".addNotesIcon").css({
       "top": "28%",
@@ -149,8 +128,7 @@ function layoutFormat(format) {
  * DESCRIPTION - displays notes in specified format
  */
 function displayLayout() {
-  debugger;
-  let format = localStorage.getItem("Layout");
+  let format = sessionStorage.getItem("Layout");
   let notes = JSON.parse(localStorage.getItem("noteList"));
   $(".noteWrapper").remove();
   for (let i = 0; i < notes.length; i++) {
