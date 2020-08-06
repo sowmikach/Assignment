@@ -150,7 +150,7 @@ function layoutFormat(format) {
  */
 function displayLayout() {
   debugger;
-  let format = $('#view').val();
+  let format = localStorage.getItem("Layout");
   let notes = JSON.parse(localStorage.getItem("noteList"));
   $(".noteWrapper").remove();
   for (let i = 0; i < notes.length; i++) {
